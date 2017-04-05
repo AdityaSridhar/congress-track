@@ -1,4 +1,4 @@
 (function () {
     angular
-        .module("CongressTracker", ['ngRoute']);
+        .module("CongressTracker", ['ngRoute', 'ui.bootstrap']);
 })();

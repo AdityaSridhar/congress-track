@@ -13,6 +13,11 @@
                 //controller: "LoginController",
                 //controllerAs: "model"
             })
+            .when("/",{
+                templateUrl : "views/homepage/template/homepage.view.client.html",
+                controller : "HomePageController",
+                controllerAs : "model"
+            })
             .when("/home",{
                 templateUrl : "views/homepage/template/homepage.view.client.html",
                 controller : "HomePageController",

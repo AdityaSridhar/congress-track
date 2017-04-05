@@ -1,26 +1,14 @@
-<div >
-    <nav class = "navbar navbar-fixed-top navbar-inverse">
-        <div class = "container-fluid">
-                <p class = "navbar pull-right">
-                    <a class = "glyphicon " style = "text-decoration: none"
-                       href = "#/login">
-                        Login</a>
-                 <a class = "glyphicon l-pad" style = "text-decoration: none"
-                 href = "#/register">Register</a>
-                </p>
-        </div>
-    </nav>
-    <div id="slides_control">
-        <div>
-            <carousel interval="{{model.myInterval}}">
-                <slide ng-repeat="slide in model.slides" active="slide.active">
-                    <img ng-src="{{slide.image}}">
-                    <div class="carousel-caption">
-                        <h4>Slide {{slide.num}}</h4>
-                    </div>
-                </slide>
-            </carousel>
-        </div>
+
+<div id="slides_control">
+    <div>
+        <carousel interval="model.myInterval">
+            <slide ng-repeat="slide in model.slides" active="active" index="$index">
+                <img ng-src="{{slide.image}}">
+                <div class="carousel-caption">
+                    <h4>Slide {{$index+1}}</h4>
+                </div>
+            </slide>
+        </carousel>
     </div>
 </div>
 
