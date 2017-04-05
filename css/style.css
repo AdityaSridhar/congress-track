@@ -1,0 +1,36 @@
+/*.navbar {*/
+    /*background-color: transparent;*/
+    /*background: transparent;*/
+    /*border-color: #ffffff;*/
+/*}*/
+
+.navbar-inverse {
+    opacity: 0.4;
+    filter: alpha(opacity=10);
+}
+
+.navbar{
+    height : 75px;
+}
+
+.glyphicon{
+    font-size : 30px;
+}
+
+.nav-icon.glyphicon{
+    font-size : 40px;
+}
+
+.l-pad{
+    padding-left : 10px;
+}
+
+.custom-body{
+    background-image : url("https://images5.alphacoders.com/306/306622.jpg");
+    background-repeat : no-repeat;
+    background-size : cover;
+}
+
+.t-pad{
+    padding-top : 20px;
+}
