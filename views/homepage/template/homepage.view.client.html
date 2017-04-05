@@ -1,5 +1,4 @@
 <div >
-    <div>
     <nav class = "navbar navbar-fixed-top navbar-inverse">
         <div class = "container-fluid">
                 <p class = "navbar pull-right">
@@ -11,7 +10,20 @@
                 </p>
         </div>
     </nav>
+    <div id="slides_control">
+        <div>
+            <carousel interval="{{model.myInterval}}">
+                <slide ng-repeat="slide in model.slides" active="slide.active">
+                    <img ng-src="{{slide.image}}">
+                    <div class="carousel-caption">
+                        <h4>Slide {{slide.num}}</h4>
+                    </div>
+                </slide>
+            </carousel>
+        </div>
+    </div>
 </div>
+
 
 
 

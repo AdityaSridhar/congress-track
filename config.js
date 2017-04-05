@@ -23,5 +23,8 @@
                 controller : "HomePageController",
                 controllerAs : "model"
             })
+            .when("/graphs",{
+                templateUrl : "cardsDemo.html"
+            })
             .otherwise({redirectTo:'/home'})
     }})();
