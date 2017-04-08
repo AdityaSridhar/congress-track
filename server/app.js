@@ -11,4 +11,9 @@ module.exports = function (app) {
 
     var mongoose = require("mongoose");
     mongoose.connect(connectionString);
+    var q = require('q');
+    mongoose.Promise = q.Promise;
+
+    var model = require('./models/models.server.js')();
+    require("./services/user.service.server.js")(app, model.userModel);
 };

@@ -9,14 +9,14 @@
 
         $routeProvider
             .when("/login", {
-                templateUrl: "views/user/templates/login.view.client.html"
-                //controller: "LoginController",
-                //controllerAs: "model"
+                templateUrl: "views/user/templates/login.view.client.html",
+                controller: "LoginController",
+                controllerAs: "model"
             })
             .when("/",{
-                templateUrl : "views/homepage/template/homepage.view.client.html",
-                controller : "HomePageController",
-                controllerAs : "model"
+                templateUrl: "views/user/templates/login.view.client.html",
+                controller: "LoginController",
+                controllerAs: "model"
             })
             .when("/home",{
                 templateUrl : "views/homepage/template/homepage.view.client.html",
@@ -29,7 +29,7 @@
                 controllerAs : "model"
             })
             .when("/graphs",{
-                templateUrl : "cardsDemo.html"
+                templateUrl : "../cardsDemo.html"
             })
             .otherwise({redirectTo:'/home'})
     }})();
