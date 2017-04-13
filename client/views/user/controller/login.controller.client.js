@@ -6,6 +6,7 @@
     function LoginController($location, UserService, $rootScope) {
         var vm = this;
         vm.login = login;
+        vm.dismissAlert = dismissAlert;
 
         function login(user) {
             UserService
@@ -18,6 +19,10 @@
                 .catch(function (error) {
                     vm.error = "Unable to login";
                 })
+        }
+
+        function dismissAlert() {
+            vm.error = "";
         }
     }
 })();

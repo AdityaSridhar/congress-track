@@ -1,54 +1,91 @@
-<div class="login-wrap">
-    <div class="login-html">
-        <input id="tab-1" type="radio" name="tab" class="sign-in"><label for="tab-1" class="tab">Sign In</label>
-        <input id="tab-2" type="radio" name="tab" class="sign-up" checked><label for="tab-2" class="tab">Sign Up</label>
-        <div class="login-form">
-            <div class="sign-up-htm">
-                <div class="group">
-                    <label for="user" class="label">Username</label>
-                    <input id="user" type="text" class="input">
-                </div>
-                <div class="group">
-                    <label for="pass" class="label">Password</label>
-                    <input id="pass" type="password" class="input" data-type="password">
-                </div>
-                <div class="group">
-                    <label for="pass" class="label">Repeat Password</label>
-                    <input id="pass" type="password" class="input" data-type="password">
-                </div>
-                <div class="group">
-                    <label for="pass" class="label">Email Address</label>
-                    <input id="pass" type="text" class="input">
-                </div>
-                <div class="group">
-                    <input type="submit" class="button" value="Sign Up">
-                </div>
-                <div class="hr"></div>
-                <div class="foot-lnk">
-                    <label for="tab-1">Already Member?</a>
-                </div>
-            </div>
-            <div class="sign-in-htm">
-                <div class="group">
-                    <label for="user" class="label">Username</label>
-                    <input id="user" type="text" class="input">
-                </div>
-                <div class="group">
-                    <label for="pass" class="label">Password</label>
-                    <input id="pass" type="password" class="input" data-type="password">
-                </div>
-                <div class="group">
-                    <input id="check" type="checkbox" class="check" checked>
-                    <label for="check"><span class="icon"></span> Keep me Signed in</label>
-                </div>
-                <div class="group">
-                    <input type="submit" class="button" value="Sign In">
-                </div>
-                <div class="hr"></div>
-                <div class="foot-lnk">
-                    <a href="#forgot">Forgot Password?</a>
-                </div>
-            </div>
+<div class="container-fluid">
+    <div class="col-sm-6 col-sm-offset-3 card-form">
+        <h1 class="text-center">Register</h1>
+
+        <div class="alert alert-danger alert-dismissible" ng-show="model.error">
+            <button type="button" class="close" aria-label="Close" ng-click="model.dismissAlert()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <strong>{{model.error}}</strong>
         </div>
+
+        <form name="registrationForm" ng-submit="model.register(model.user)" novalidate>
+
+            <div class="form-group"
+                 ng-class="{ 'has-error' : registrationForm.username.$invalid && !registrationForm.username.$pristine }">
+                <label>User Name *</label>
+                <input ng-model="model.user.username"
+                       type="text"
+                       name="username"
+                       class="form-control"
+                       placeholder="username"
+                       required/>
+                <p ng-show="registrationForm.username.$invalid && !registrationForm.username.$pristine"
+                   class="help-block">Please provide a User Name.</p>
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input ng-model="model.user.email"
+                       type="email"
+                       name="email"
+                       class="form-control"
+                       placeholder="john@doe.com"/>
+                <p ng-show="registrationForm.email.$invalid && !registrationForm.email.$pristine"
+                   class="help-block">Please provide a valid email ID.</p>
+            </div>
+
+            <div class="form-group">
+                <label>Address *</label>
+                <input ng-model="model.user.address"
+                       type="text"
+                       name="address"
+                       class="form-control"
+                       placeholder="555 Prudential Drive, Boston, MA"
+                       required/>
+                <p ng-show="registrationForm.address.$invalid && !registrationForm.address.$pristine"
+                   class="help-block">Please provide the street address with city/town and state.</p>
+            </div>
+
+            <div class="form-group">
+                <label>Password *</label>
+                <input ng-model="model.user.password"
+                       type="password"
+                       name="password"
+                       class="form-control"
+                       placeholder="Password"
+                       required/>
+                <p ng-show="registrationForm.password.$invalid && !registrationForm.password.$pristine"
+                   class="help-block">Please provide a password.</p>
+            </div>
+
+            <div class="form-group">
+                <label>Verify Password *</label>
+                <input type="password"
+                       name="vpass"
+                       class="form-control"
+                       placeholder="Verify Password"
+                       ng-model="model.confirmPassword"
+                       required/>
+                <p ng-show="registrationForm.vpass.$error.required && !registrationForm.vpass.$pristine"
+                   class="help-block">Please enter the same password as above.</p>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-3 col-sm-offset-3">
+                    <button type="submit"
+                            class="btn btn-primary btn-block"
+                            ng-disabled="registrationForm.$invalid">
+                        Register
+                    </button>
+                </div>
+                <div class="col-sm-3">
+                    <a class="btn btn-danger btn-block"
+                       href="#/login">Cancel</a>
+                </div>
+            </div>
+        </form>
+
+        <p>* indicates required field</p>
     </div>
 </div>

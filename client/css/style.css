@@ -1,56 +1,32 @@
-/*.navbar {*/
-    /*background-color: transparent;*/
-    /*background: transparent;*/
-    /*border-color: #ffffff;*/
-/*}*/
-
-.navbar-inverse {
-    opacity: 0.4;
-    filter: alpha(opacity=10);
+body{
+    font-family: 'Roboto Slab', serif;
+    background-color: whitesmoke;
 }
 
-.navbar{
-    height : 75px;
+.mugshot
+{
+    width: 120px;
+    height: 150px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
 }
 
-.glyphicon{
-    font-size : 30px;
+.profile-card
+{
+    margin: 5px;
+    background-color: gainsboro;
+    padding: 5px;
 }
 
-.nav-icon.glyphicon{
-    font-size : 40px;
+.profile-footer
+{
+    background-color: gainsboro;
 }
 
-.l-pad{
-    padding-left : 10px;
-}
-
-.custom-body{
-    background-image : url("https://images5.alphacoders.com/306/306622.jpg");
-    background-repeat : no-repeat;
-    background-size : cover;
-}
-
-.t-pad{
-    padding-top : 20px;
-}
-
-.tt-pad{
-    padding-top : 200px;
-}
-
-/*Carousel*/
-#slides_control > div{
-    height: 200px;
-}
-img{
-    margin:auto;
-    width: 400px;
-}
-#slides_control {
-    position:absolute;
-    width: 400px;
-    left:50%;
-    top:20px;
-    margin-left:-200px;
+.nav-text
+{
+    color: whitesmoke;
 }

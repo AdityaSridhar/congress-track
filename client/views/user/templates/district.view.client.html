@@ -1,0 +1,54 @@
+<nav class="navbar navbar-fixed-top navbar-inverse bg-inverse">
+    <div class="container-fluid">
+        <div class="navbar-text pull-left">
+            <a class="nav-text" href="#/user/{{model.userId}}">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+        </div>
+        <div class="navbar-header navbar-text">
+            <a class="navbar-brand nav-text" href="#/user/{{model.userId}}/district">
+                My District
+            </a>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="card w-50 text-center profile-card" style="width: 20rem;">
+        <img class="card-img-top mugshot" ng-src="{{model.repPhoto}}" alt="Card image cap">
+        <div class="card-block">
+            <h4 class="card-title">{{model.rep.name}}</h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+
+            <h6>Party: {{model.rep.party}}</h6>
+            <h6>Term: {{model.rep.term}}</h6>
+            <h6>Office: {{model.rep.office}}</h6>
+            <h6>Phone: {{model.rep.phone}}</h6>
+        </div>
+        <div class="card-footer profile-footer">
+            <a class="btn btn-primary" href="{{model.rep.twitter}}" target="_blank">
+                <i class="fa fa-twitter"></i>
+            </a>
+            <a class="btn btn-primary" href="{{model.rep.facebook}}" target="_blank">
+                <i class="fa fa-facebook"></i>
+            </a>
+            <a class="btn btn-danger" href="{{model.rep.website}}" target="_blank">
+                <i class="fa fa-user-circle-o"></i>
+            </a>
+        </div>
+    </div>
+
+    <br>
+
+    <h4 class="text-center">Sponsored Bills</h4>
+    <ul class="list-group">
+        <li ng-repeat="bill in model.sponsored_bills" href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+                <a class="mb-1" href="{{bill.urls.congress}}" target="_blank">{{bill.bill_id}}</a>
+                <small>Introduced on {{bill.introduced_on}}</small>
+            </div>
+            <p class="mb-1">{{bill.official_title}}</p>
+        </li>
+    </ul>
+</div>

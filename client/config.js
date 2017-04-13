@@ -1,7 +1,23 @@
-(function(){
+(function () {
     angular
         .module("CongressTracker")
         .config(Config);
+
+    var checkLoggedin = function ($q, $timeout, $http, $location, $rootScope) {
+        var deferred = $q.defer();
+        $http.get('/api/loggedin').success(function (user) {
+            $rootScope.errorMessage = null;
+            if (user !== '0') {
+                $rootScope.currentUser = user;
+                deferred.resolve();
+            }
+            else {
+                deferred.reject();
+                $location.url('/');
+            }
+        });
+        return deferred.promise;
+    };
 
     function Config($routeProvider, $httpProvider) {
         $httpProvider.defaults.headers.post['Content-Type'] = 'application/json;charset=UTF-8';
@@ -13,23 +29,32 @@
                 controller: "LoginController",
                 controllerAs: "model"
             })
-            .when("/",{
+            .when("/", {
                 templateUrl: "views/user/templates/login.view.client.html",
                 controller: "LoginController",
                 controllerAs: "model"
             })
-            .when("/home",{
-                templateUrl : "views/homepage/template/homepage.view.client.html",
-                controller : "HomePageController",
-                controllerAs : "model"
+            .when("/home", {
+                templateUrl: "views/homepage/template/homepage.view.client.html",
+                controller: "HomePageController",
+                controllerAs: "model"
             })
-            .when("/register",{
-                templateUrl : "views/user/templates/register.view.client.html",
-                controller : "HomePageController",
-                controllerAs : "model"
+            .when("/user/:uid", {
+                templateUrl: "views/user/templates/profile.view.client.html",
+                controller: "ProfileController",
+                controllerAs: "model",
+                resolve: {loggedin: checkLoggedin}
             })
-            .when("/graphs",{
-                templateUrl : "../cardsDemo.html"
+            .when("/user/:uid/district", {
+                templateUrl: "views/user/templates/district.view.client.html",
+                controller: "DistrictController",
+                controllerAs: "model"
             })
-            .otherwise({redirectTo:'/home'})
-    }})();
+            .when("/register", {
+                templateUrl: "views/user/templates/register.view.client.html",
+                controller: "RegisterController",
+                controllerAs: "model"
+            })
+            .otherwise({redirectTo: '/home'})
+    }
+})();
