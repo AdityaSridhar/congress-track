@@ -5,10 +5,17 @@ module.exports = function (app, model) {
     var LocalStrategy = require('passport-local').Strategy;
     var FacebookStrategy = require('passport-facebook').Strategy;
 
+    // var facebookConfig = {
+    //     clientID: process.env.FACEBOOK_CLIENT_ID,
+    //     clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
+    //     callbackURL: process.env.FACEBOOK_CALLBACK_URL,
+    //     profileFields: ['id', 'name', 'emails']
+    // };
+
     var facebookConfig = {
-        clientID: process.env.FACEBOOK_CLIENT_ID,
-        clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
-        callbackURL: process.env.FACEBOOK_CALLBACK_URL,
+        clientID: ' ',
+        clientSecret: ' ',
+        callbackURL: ' ',
         profileFields: ['id', 'name', 'emails']
     };
 

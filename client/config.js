@@ -27,6 +27,7 @@
             .when("/login", {
                 templateUrl: "views/user/templates/login.view.client.html",
                 controller: "LoginController",
+                controller: "RegisterController",
                 controllerAs: "model"
             })
             .when("/", {
@@ -53,6 +54,7 @@
             .when("/register", {
                 templateUrl: "views/user/templates/register.view.client.html",
                 controller: "RegisterController",
+                controller: "LoginController",
                 controllerAs: "model"
             })
             .otherwise({redirectTo: '/home'})

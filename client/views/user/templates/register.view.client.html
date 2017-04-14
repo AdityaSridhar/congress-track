@@ -89,3 +89,121 @@
         <p>* indicates required field</p>
     </div>
 </div>
+
+<div class="login-wrap">
+    <div class="login-html">
+        <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+        <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+        <div class="login-form">
+            <div class="sign-in-htm">
+                <form name="loginForm" ng-submit="model.login(model.user)" novalidate>
+                    <p ng-show="model.error">{{model.error}}</p>
+                    <div class="group"
+                         ng-class="{ 'has-error' : loginForm.username.$invalid && !registrationForm.username.$pristine }">
+                        <input ng-model="model.user.username"
+                               type="text"
+                               class="input"
+                               name="username"
+                               placeholder="Carmen Sandiego" required/>
+                        <p ng-show="loginForm.username.$invalid && !loginForm.username.$pristine"
+                           class="help-block">Please provide a User Name.</p>
+                    </div>
+                    <div class="group"
+                         ng-class="{ 'has-error' : loginForm.password.$invalid && !registrationForm.password.$pristine }">
+                        <input ng-model="model.user.password"
+                               type="password"
+                               class="input"
+                               name="password"
+                               placeholder="Password" required/>
+                        <p ng-show="loginForm.password.$invalid && !loginForm.password.$pristine"
+                           class="help-block">Please provide a password.</p>
+                    </div>
+                    <div class="group">
+                        <input type="submit" class="button" value="Sign In" ng-disabled="loginForm.$invalid">
+                    </div>
+
+                    <div class="group">
+                        <a href="/auth/facebook" >
+                            <div align="center">
+                                <span class="fa fa-facebook"></span>
+                                <text style="te:none">Facebook</text>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="hr"></div>
+                </form>
+            </div>
+            <div class="sign-up-htm">
+                <div>
+                    <form name="registrationForm" ng-submit="model.register(model.user)" novalidate>
+                        <p ng-show="model.error">{{model.error}}</p>
+                        <div class="group"
+                             ng-class="{ 'has-error' : registrationForm.username.$invalid && !registrationForm.username.$pristine }">
+                            <label>User Name *</label>
+                            <input ng-model="model.user.username"
+                                   type="text"
+                                   name="username"
+                                   class="input"
+                                   placeholder="username"
+                                   required/>
+                            <p ng-show="registrationForm.username.$invalid && !registrationForm.username.$pristine"
+                               class="help-block">Please provide a User Name.</p>
+                        </div>
+                        <div class="group">
+                            <label>Email</label>
+                            <input ng-model="model.user.email"
+                                   type="email"
+                                   name="email"
+                                   class="input"
+                                   placeholder="john@doe.com"/>
+                            <p ng-show="registrationForm.email.$invalid && !registrationForm.email.$pristine"
+                               class="help-block">Please provide a valid email ID.</p>
+                        </div>
+
+                        <div class="group">
+                            <label>Address *</label>
+                            <input ng-model="model.user.address"
+                                   type="text"
+                                   name="address"
+                                   class="input"
+                                   placeholder="555 Prudential Drive, Boston, MA"
+                                   required/>
+                            <p ng-show="registrationForm.address.$invalid && !registrationForm.address.$pristine"
+                               class="help-block">Please provide the street address with city/town and state.</p>
+                        </div>
+
+                        <div class="group">
+                            <label>Password *</label>
+                            <input ng-model="model.user.password"
+                                   type="password"
+                                   name="password"
+                                   class="input"
+                                   placeholder="Password"
+                                   required/>
+                            <p ng-show="registrationForm.password.$invalid && !registrationForm.password.$pristine"
+                               class="help-block">Please provide a password.</p>
+                        </div>
+
+                        <div class="group">
+                            <label>Verify Password *</label>
+                            <input type="password"
+                                   name="vpass"
+                                   class="input"
+                                   placeholder="Verify Password"
+                                   ng-model="model.confirmPassword"
+                                   required/>
+                            <p ng-show="registrationForm.vpass.$error.required && !registrationForm.vpass.$pristine"
+                               class="help-block">Please enter the same password as above.</p>
+                        </div>
+                        <div class="group">
+                            <input type="submit" class="button" value="Register" ng-disabled="registrationForm.$invalid">
+                        </div>
+                        <div class="hr"></div>
+                        <div class="foot-lnk">
+                            <label for="tab-1">Already Member?</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
