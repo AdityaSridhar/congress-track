@@ -8,7 +8,8 @@
         var api = {
             "findRepresentative": findRepresentative,
             "findCongressionalDistrict": findCongressionalDistrict,
-            "findSponsoredBills": findSponsoredBills
+            "findSponsoredBills": findSponsoredBills,
+            "findCommittees": findCommittees
         };
 
         var urlBase = "https://congress.api.sunlightfoundation.com";
@@ -28,6 +29,12 @@
 
         function findSponsoredBills(sponsor_id) {
             var url = urlBase + "/bills?sponsor_id=" + sponsor_id + "&callback=JSON_CALLBACK";
+            $sce.trustAsResourceUrl(url);
+            return $http.jsonp(url);
+        }
+
+        function findCommittees(member_id) {
+            var url = urlBase + "/committees?member_ids=" + member_id + "&callback=JSON_CALLBACK";
             $sce.trustAsResourceUrl(url);
             return $http.jsonp(url);
         }

@@ -41,7 +41,12 @@
                                                             CongressAPIService.findSponsoredBills(vm.rep.bioguide)
                                                                 .then(function (bills) {
                                                                     vm.sponsored_bills = bills.data.results;
-                                                                })
+                                                                });
+
+                                                            CongressAPIService.findCommittees(vm.rep.bioguide)
+                                                                .then(function (committees) {
+                                                                    vm.committees = committees.data.results;
+                                                                });
                                                         }
                                                     })
                                             }

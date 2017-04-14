@@ -16,9 +16,13 @@ body{
 
 .profile-card
 {
-    margin: 5px;
-    background-color: gainsboro;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    background-color: silver;
     padding: 5px;
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .profile-footer
