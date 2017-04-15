@@ -59,10 +59,14 @@
             </div>
             <p class="mb-1">{{bill.official_title}}</p>
             <div>
-                <a onclick="">
-                <span class="fa fa-arrow-up"></a>
-                <a href="www.yahoo.com">
-                <span class="fa fa-arrow-down"></a></span></span>
+                <a onclick=model.registerVote(model.user, 'Upvote', bill.bill_id)>
+                <button type="button"
+                        id="testBtn"
+                        onclick="model.registerVote(model.user, 'Upvote', bill.bill_id)"
+                        class="btn btn-success fa fa-thumbs-up"
+                        data-loading-text=" ... "></button>
+                <button type="button" id="testBtnDown" class="btn btn-success fa fa-thumbs-down" data-loading-text=" ... ">
+                    </button>
             </div>
         </li>
     </ul>

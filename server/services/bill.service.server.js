@@ -38,8 +38,31 @@ module.exports = function (app, model){
                         .then(function (response) {
                             res.json(response);
                         },function () {
-                            res.sendStatus(404);
-                        })
+                            if user.vote === 'Upvote'{
+                                var bill = {
+                                    'billId': billId,
+                                    'upvote': 1,
+                                    'downvote': 0,
+                                    'listOfVoters': {user}
+                                }
+                            }else{
+                                var bill = {
+                                    'billId': billId,
+                                    'upvote': 0,
+                                    'downvote': 1,
+                                    'listOfVoters': {user}
+                                }
+                            }
+                            model
+                                .createBill(bill)
+                                .then(function(bill){
+                                    if(bill) {
+                                        res.json(bill);
+                                    }
+                                },function(){
+                                    res.sendStatus(404);
+                                });
+                        });
                 }
                 else{
                     res.sendStatus(404);
