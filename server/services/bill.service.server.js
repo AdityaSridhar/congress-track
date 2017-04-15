@@ -14,7 +14,7 @@ module.exports = function (app, model){
         model
             .findBillById(billId)
             .then(function (bill) {
-                if (bill.lenght != 0) {
+                if (bill.length != 0) {
                     res.json(bill);
                 } else {
                     res.sendStatus(404);
@@ -38,19 +38,19 @@ module.exports = function (app, model){
                         .then(function (response) {
                             res.json(response);
                         },function () {
-                            if user.vote === 'Upvote'{
+                            if (user.vote === 'Upvote'){
                                 var bill = {
                                     'billId': billId,
                                     'upvote': 1,
                                     'downvote': 0,
-                                    'listOfVoters': {user}
+                                    'listOfVoters': [user]
                                 }
                             }else{
                                 var bill = {
                                     'billId': billId,
                                     'upvote': 0,
                                     'downvote': 1,
-                                    'listOfVoters': {user}
+                                    'listOfVoters': [user]
                                 }
                             }
                             model
@@ -72,4 +72,4 @@ module.exports = function (app, model){
             });
     }
 
-}
+};

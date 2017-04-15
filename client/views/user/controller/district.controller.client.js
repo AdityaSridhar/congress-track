@@ -3,7 +3,7 @@
         .module("CongressTracker")
         .controller("DistrictController", DistrictController);
 
-    function DistrictController($location, $routeParams, UserService, GeoLocationService, CongressAPIService, $sce) {
+    function DistrictController($location, $routeParams, UserService, BillService, GeoLocationService, CongressAPIService, $sce) {
         var vm = this;
         vm.userId = $routeParams.uid;
         vm.registerVote = registerVote;
@@ -61,8 +61,8 @@
 
         init();
 
-        function registerVote(user, vote, billId){
-            var voter = {'id' : user._id,
+        function registerVote(vote, billId){
+            var voter = {'id' : vm.userId,
                 'vote' : vote};
             BillService
                 .registerVot(voter, billId)
