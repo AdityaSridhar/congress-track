@@ -8,6 +8,8 @@
         vm.userId = $routeParams.uid;
         vm.registerVote = registerVote;
 
+        vm.bil = {};
+
         function init() {
             UserService.findUserById(vm.userId)
                 .then(function (user) {
@@ -67,7 +69,9 @@
             BillService
                 .registerVot(voter, billId)
                 .then(function(bill){
-                    console.log("Vote "+bill);
+                    console.log("Vote "+ bill.data.upvote);
+                    vm.bil[billId] = {'upvote' : bill.data.upvote, 'downvote' : bill.data.downvote};
+                    console.log(vm.bil[billId].upvote);
                 },function(){});
         }
     }

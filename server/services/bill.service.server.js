@@ -34,7 +34,7 @@ module.exports = function (app, model){
             .updateBill(billId, user)
             .then(function (bill) {
                 if (bill) {
-                    console.log("What? "+bill);
+                    console.log("Checking return at server "+bill);
                     res.json(bill);
                 }else{
                     res.sendStatus(404);
