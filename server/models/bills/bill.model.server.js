@@ -34,17 +34,19 @@ module.exports = function () {
                 var check = 0;
                 console.log("returned bill " +Bill);
 
-                for(var l in loVoters){
+                for(var l in Bill.listOfVoters){
                     console.log("Loop "+user.id);
-                    if (user.id === loVoters[l].userId){
+                    if (user.id === Bill.listOfVoters[l].userId){
                         check = 1;
-                        if(user.vote !== loVoters[l].vote){
+                        if(user.vote !== Bill.listOfVoters[l].vote){
                             if(user.vote === 'Upvote') {
                                 Bill.upvote = Bill.upvote + 1;
                                 Bill.downvote = Bill.downvote - 1;
+                                Bill.listOfVoters[l].vote = 'Upvote';
                             }else{
                                 Bill.upvote = Bill.upvote - 1;
                                 Bill.downvote = Bill.downvote + 1;
+                                Bill.listOfVoters[l].vote = 'Downvote'
                             }
                         }
                     }

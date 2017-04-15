@@ -40,19 +40,20 @@ module.exports = function (app, model){
                     res.sendStatus(404);
                 }
             },function () {
+                var use =  {userId : user.id, vote : user.vote};
                 if (user.vote === 'Upvote'){
                     var bill = {
                         'billId': billId,
                         'upvote': 1,
                         'downvote': 0,
-                        'listOfVoters': [user]
+                        'listOfVoters': [use]
                     }
                 }else{
                     var bill = {
                         'billId': billId,
                         'upvote': 0,
                         'downvote': 1,
-                        'listOfVoters': [user]
+                        'listOfVoters': [use]
                     }
                 }
                 model
