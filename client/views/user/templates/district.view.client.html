@@ -64,7 +64,9 @@
                         ng-click="model.registerVote('Upvote', bill.bill_id)"
                         class="btn btn-success fa fa-thumbs-up"
                         data-loading-text=" ... "></button>
-                <button type="button" id="testBtnDown" class="btn btn-success fa fa-thumbs-down" data-loading-text=" ... ">
+                <button type="button" id="testBtnDown"
+                        ng-click="model.registerVote('Downvote', bill.bill_id)
+                        class="btn btn-success fa fa-thumbs-down" data-loading-text=" ... ">
                     </button>
             </div>
         </li>

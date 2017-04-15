@@ -2,7 +2,7 @@ module.exports = function () {
 
     var api = {
         createBill : createBill,
-        findBill: findBill,
+        // findBill: findBill,
         findBillById: findBillById,
         updateBill: updateBill,
         deleteBill: deleteBill,
@@ -19,25 +19,27 @@ module.exports = function () {
     }
 
     function findBillById(billId) {
-        return BillModel.findone({billId : billId})
-            .exec()
+        console.log("Hit findBillById "+ billId)
+        return BillModel.findOne({billId : billId})
             .then(function (bill) {
                 return bill;
             });
     }
 
     function updateBill(billId, user) {
+        console.log("Match user "+user.id);
         return findBillById(billId)
-            .exec()
             .then(function (Bill) {
                 loVoters = Bill.listOfVoters;
                 var check = 0;
+                console.log("returned bill " +Bill);
 
                 for(var l in loVoters){
-                    if user.id === loVoters[l].userId{
+                    console.log("Loop "+user.id);
+                    if (user.id === loVoters[l].userId){
                         check = 1;
                         if(user.vote !== loVoters[l].vote){
-                            if(user.vote === 'upvote') {
+                            if(user.vote === 'Upvote') {
                                 Bill.upvote = Bill.upvote + 1;
                                 Bill.downvote = Bill.downvote - 1;
                             }else{
@@ -48,16 +50,22 @@ module.exports = function () {
                     }
                 }
 
+                console.log(check);
+
                 if (check === 0){
-                    if (user.vote === 'upvote'){
+                    if (user.vote === 'Upvote'){
                         Bill.upvote = Bill.upvote + 1;
-                        Bill.listOfVoters.push(user);
+                        Bill.listOfVoters.push({userId : user.id, vote : user.vote});
+                        console.log("While pushing: "+user.id);
+                    }else{
+                        Bill.downvote = Bill.downvote + 1;
+                        Bill.listOfVoters.push({userId : user.id, vote : user.vote});
                     }
                 }
 
                 return BillModel.findByIdAndUpdate(Bill._id, Bill, {new: true})
-                    .exec()
                     .then(function (updatedBill) {
+                        console.log("Final value "+updatedBill);
                         return updatedBill;
                     });
             });
@@ -65,7 +73,6 @@ module.exports = function () {
 
     function deleteBill(userId) {
         return BillModel.findById(userId)
-            .exec()
             .then(function (user) {
                 return user.remove();
             });

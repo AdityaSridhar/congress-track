@@ -66,7 +66,9 @@
                 'vote' : vote};
             BillService
                 .registerVot(voter, billId)
-                .then(function(bill){},function(){});
+                .then(function(bill){
+                    console.log(bill);
+                },function(){});
         }
     }
 })();

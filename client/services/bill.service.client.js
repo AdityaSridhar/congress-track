@@ -8,12 +8,14 @@
 
     function BillService($http) {
 
+
         var api = {
             "registerVot": registerVot,
         };
         return api;
 
         function registerVot(voter,billId) {
+            console.log(voter);
             return $http.put("/api/bill/"+billId, voter);
         }
     }

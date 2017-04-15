@@ -5,7 +5,7 @@
 module.exports = function (app, model){
 
     app.get("/api/bill", findBill);
-    app.get("/api/bill/:billId", findBillById);
+    // app.get("/api/bill/:billId", findBillByID);
     app.put("/api/bill/:billId", updateBill);
 
     function findBill(req, res) {
@@ -24,51 +24,48 @@ module.exports = function (app, model){
             });
     }
 
+
     function updateBill(req, res){
-        var user = req.query.user;
+        var user = req.body;
+        console.log("Stripped "+user.id);
         var billId = req.params.billId;
 
         model
             .updateBill(billId, user)
             .then(function (response) {
-                if(response.nModified === 1){
-                    // Update was successful
-                    model
-                        .findBillById(billId)
-                        .then(function (response) {
-                            res.json(response);
-                        },function () {
-                            if (user.vote === 'Upvote'){
-                                var bill = {
-                                    'billId': billId,
-                                    'upvote': 1,
-                                    'downvote': 0,
-                                    'listOfVoters': [user]
-                                }
-                            }else{
-                                var bill = {
-                                    'billId': billId,
-                                    'upvote': 0,
-                                    'downvote': 1,
-                                    'listOfVoters': [user]
-                                }
-                            }
-                            model
-                                .createBill(bill)
-                                .then(function(bill){
-                                    if(bill) {
-                                        res.json(bill);
-                                    }
-                                },function(){
-                                    res.sendStatus(404);
-                                });
-                        });
-                }
-                else{
+                if (bill) {
+                    console.log(bill);
+                    res.json(bill);
+                }else{
                     res.sendStatus(404);
                 }
             },function () {
-                res.sendStatus(404);
+                if (user.vote === 'Upvote'){
+                    var bill = {
+                        'billId': billId,
+                        'upvote': 1,
+                        'downvote': 0,
+                        'listOfVoters': [user]
+                    }
+                }else{
+                    var bill = {
+                        'billId': billId,
+                        'upvote': 0,
+                        'downvote': 1,
+                        'listOfVoters': [user]
+                    }
+                }
+                model
+                    .createBill(bill)
+                    .then(function(bill){
+                        if(bill) {
+                            console.log("Create "+bill);
+                            res.json(bill);
+                        }
+                    },function(){
+                        console.log("Check1");
+                        res.sendStatus(404);
+                    });
             });
     }
 
