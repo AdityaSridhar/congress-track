@@ -32,9 +32,9 @@ module.exports = function (app, model){
 
         model
             .updateBill(billId, user)
-            .then(function (response) {
+            .then(function (bill) {
                 if (bill) {
-                    console.log(bill);
+                    console.log("What? "+bill);
                     res.json(bill);
                 }else{
                     res.sendStatus(404);

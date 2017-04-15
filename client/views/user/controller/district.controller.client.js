@@ -67,7 +67,7 @@
             BillService
                 .registerVot(voter, billId)
                 .then(function(bill){
-                    console.log(bill);
+                    console.log("Vote "+bill);
                 },function(){});
         }
     }

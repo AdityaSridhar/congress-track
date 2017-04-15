@@ -16,7 +16,9 @@
 
         function registerVot(voter,billId) {
             console.log(voter);
-            return $http.put("/api/bill/"+billId, voter);
+            var a = $http.put("/api/bill/"+billId, voter);
+            console.log("Checking return at client service "+a);
+            return a;
         }
     }
 })();
