@@ -84,8 +84,9 @@
                                                                             .then(function(bill){
                                                                                 console.log("Bill "+JSON.stringify(bill));
                                                                                 vm.bil[bill.data.billId] = {'upvote' : bill.data.upvote, 'downvote' : bill.data.downvote};
-                                                                            }, function(){
-                                                                                vm.bil[bill.data.billId] = {'upvote' : 0, 'downvote' : 0};
+                                                                            })
+                                                                            .catch (function(error){
+                                                                                    vm.bil[vm.sponsored_bills[s].bill_id] = {'upvote' : 0, 'downvote' : 0};
                                                                             });
                                                                     }
                                                                 });

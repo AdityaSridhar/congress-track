@@ -1,3 +1,4 @@
+
 (function () {
     angular
         .module("CongressTracker")
@@ -34,6 +35,11 @@
                 controller: "LoginController",
                 controllerAs: "model"
             })
+            .when("/cards", {
+                templateUrl: "views/homepage/template/cards.html",
+                controller: "HomePageController",
+                controllerAs: "model"
+            })
             .when("/home", {
                 templateUrl: "views/homepage/template/homepage.view.client.html",
                 controller: "HomePageController",
@@ -65,6 +71,6 @@
                 controller: "RegisterController",
                 controllerAs: "model"
             })
-            .otherwise({redirectTo: '/home'})
+            .otherwise({redirectTo: '/cards'})
     }
 })();
