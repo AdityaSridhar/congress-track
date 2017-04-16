@@ -16,10 +16,9 @@
 <div class="container">
     <div class="card w-50 text-center profile-card" style="width: 20rem;">
         <img class="card-img-top mugshot" ng-src="{{model.repPhoto}}" alt="Card image cap">
+        <i ng-class="{'fa fa-star': model.liked, 'fa fa-star-o': !model.liked}" ng-click="model.changeClass(model.rep.name)"></i>
         <div class="card-block">
             <h4 class="card-title">{{model.rep.name}}</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
 
             <h6>Party: {{model.rep.party}}</h6>
             <h6>Term: {{model.rep.term}}</h6>

@@ -1,4 +1,4 @@
-module.exports = function (app, model) {
+ module.exports = function (app, model) {
 
     var bcrypt = require('bcrypt-nodejs');
     var passport = require('passport');
@@ -29,6 +29,8 @@ module.exports = function (app, model) {
     app.post("/api/logout", logout);
     app.post("/api/register", register);
     app.get("/api/loggedIn", loggedin);
+    app.post("/api/user/fave", addToFave);
+    app.post("/api/user/fave/remove", removeFromFave);
 
     app.get("/auth/facebook", passport.authenticate('facebook', {scope: ['public_profile', 'email']}));
     app.get("/auth/facebook/callback", passport.authenticate('facebook', {
@@ -231,6 +233,35 @@ module.exports = function (app, model) {
             .catch(function (error) {
                 res.sendStatus(500).send(error);
             });
+    }
+
+    function addToFave(req, res){
+        var bod = req.body;
+        var name = bod.name;
+        var id = bod.id;
+        console.log("From server add to fave :" + name);
+        console.log(id);
+        model.addToFav(name, id)
+            .then(function(user){
+            res.json(user);
+        })
+            .catch(function (error) {
+            res.sendStatus(500).send(error);
+        });
+    }
+
+    function removeFromFave(req, res){
+        var bod = req.body;
+        var name = bod.name;
+        var id = bod.id;
+        console.log("Server service R" +bod.id);
+        model.removeFromFav(name, id)
+            .then(function(user){
+            res.json(user);
+        })
+    .catch(function (error) {
+            res.sendStatus(500).send(error);
+        });
     }
 };
 

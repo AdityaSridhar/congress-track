@@ -7,6 +7,29 @@
         var vm = this;
         vm.userId = $routeParams.uid;
         vm.registerVote = registerVote;
+        vm.changeClass= changeClass;
+
+        function changeClass(name){
+
+            var bod = {'name' : name, 'id' : vm.userId};
+            if(vm.liked){
+                UserService
+                    .removeFromFave(bod)
+                    .then(function(data) {
+                        console.log(JSON.stringify(data));
+                        vm.liked = false;
+                    },function(){});
+            }else{
+                UserService
+                    .addToFave(bod)
+                    .then(function(data){
+                        vm.liked = true;
+                        console.log(JSON.stringify(data));
+                    },function(){})
+            }
+
+        }
+
 
         vm.bil = {};
 
@@ -57,6 +80,19 @@
                                 }
                             })
 
+                    }
+                    var lof = user.data.lof;
+                    var check = 0;
+                    for(var v in lof){
+                        if(lof[v].name === vm.rep.name){
+                            check = 1;
+                        }
+                    }
+
+                    if (check == 0){
+                        vm.liked = false;
+                    }else{
+                        vm.liked = true;
                     }
                 })
         }

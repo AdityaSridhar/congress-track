@@ -14,7 +14,9 @@
             "findUserByCredentials": findUserByCredentials,
             "updateUser": updateUser,
             "deleteUser": deleteUser,
-            "register": register
+            "register": register,
+            "removeFromFave" : removeFromFave,
+            "addToFave" : addToFave
         };
         return api;
 
@@ -52,6 +54,16 @@
 
         function deleteUser(userId) {
             return $http.delete("/api/user/" + userId);
+        }
+
+        function removeFromFave(bod){
+            console.log("From client server "+ JSON.stringify(bod));
+            return $http.post("/api/user/fave/remove", bod);
+        }
+
+        function addToFave(bod){
+            console.log("From slient service "+ bod);
+            return $http.post("/api/user/fave/", bod);
         }
     }
 })();

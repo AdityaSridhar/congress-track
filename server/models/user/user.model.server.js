@@ -7,7 +7,9 @@ module.exports = function () {
         findUserByCredentials: findUserByCredentials,
         updateUser: updateUser,
         deleteUser: deleteUser,
-        findUserByFacebookId: findUserByFacebookId
+        findUserByFacebookId: findUserByFacebookId,
+        addToFav : addToFav,
+        removeFromFav : removeFromFav
     };
 
     var mongoose = require('mongoose');
@@ -15,6 +17,47 @@ module.exports = function () {
     var UserModel = mongoose.model('UserModel', UserSchema);
 
     return api;
+
+    function addToFav(name, id){
+        return UserModel.findById(id)
+            .then(function (user){
+                console.log("Model "+user.lof);
+                var nam = {'name' : name};
+                user.lof.push(nam);
+                return updateUser(user._id, user)
+                    .then(function(user){
+                        console.log("after update "+user);
+                        return user;
+                    });
+            });
+    }
+
+    function removeFromFav(name, id){
+        console.log(name);
+        return UserModel.findById(id)
+            .then(function (user){
+                console.log("Remove function " + user);
+
+                var lof = user.lof;
+                var tem = {};
+                console.log("lof "+lof);
+
+                for(var v in user.lof){
+                    if(user.lof[v].name === name){
+                        user.lof.splice(v, 1);
+                    }
+                }
+
+                //user.lof = tem;
+
+                console.log(user);
+                return updateUser(user._id, user)
+                    .then(function(user){
+                        console.log("Mega user" +user);
+                        return user;
+                    });
+            });
+    }
 
     function createUser(user) {
         return UserModel.create(user);
