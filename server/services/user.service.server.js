@@ -239,9 +239,10 @@
         var bod = req.body;
         var name = bod.name;
         var id = bod.id;
+        var bio = bod.bioguide;
         console.log("From server add to fave :" + name);
         console.log(id);
-        model.addToFav(name, id)
+        model.addToFav(name, id, bio)
             .then(function(user){
             res.json(user);
         })
@@ -254,8 +255,9 @@
         var bod = req.body;
         var name = bod.name;
         var id = bod.id;
+        var bio = bod.bioguide;
         console.log("Server service R" +bod.id);
-        model.removeFromFav(name, id)
+        model.removeFromFav(name, id, bio)
             .then(function(user){
             res.json(user);
         })

@@ -1,8 +1,7 @@
 (function () {
     angular
         .module("CongressTracker")
-        .controller("LoginController", LoginController)
-        .controller("RegisterController", RegisterController);
+        .controller("LoginController", LoginController);
 
     function LoginController($location, UserService, $rootScope) {
         var vm = this;

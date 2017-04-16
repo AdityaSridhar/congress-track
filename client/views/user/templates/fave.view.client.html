@@ -1,0 +1,35 @@
+<nav class="navbar navbar-fixed-top navbar-inverse bg-inverse">
+    <div class="container-fluid">
+        <div class="navbar-text pull-left">
+            <a class="nav-text" href="#/user/{{model.userId}}">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+        </div>
+        <div class="navbar-text">
+            <a class="nav-text" href="#/user/{{model.userId}}">
+                <span class="fa fa-user-o"></span>
+            </a>
+        </div>
+        <div class="navbar-text">
+            <a class="nav-text" href="#/user/{{model.userId}}">
+                <span class="fa fa-star-o"></span>
+            </a>
+        </div>
+        <div class="navbar-header navbar-text">
+            <a class="navbar-brand nav-text" href="#/user/{{model.userId}}/district">
+                My Favorites
+            </a>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid pushDown listHandler">
+    <ul class="list-group">
+        <li ng-repeat="fave in model.lof" class="list-group-item">
+            <a href="#/user/{{model.userId}}/pol/{{fave.bioguide}}"
+               style = "text-decoration: none">
+                {{fave.name}}
+            </a>
+        </li>
+    </ul>
+</div>

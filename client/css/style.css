@@ -14,6 +14,17 @@ body{
     border-radius: 50%;
 }
 
+.pushDown{
+    position: relative;
+    top : 5px;
+}
+
+.listHandler{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 60px;
+}
+
 .profile-card
 {
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);

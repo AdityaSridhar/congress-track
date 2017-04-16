@@ -27,7 +27,6 @@
             .when("/login", {
                 templateUrl: "views/user/templates/login.view.client.html",
                 controller: "LoginController",
-                controller: "RegisterController",
                 controllerAs: "model"
             })
             .when("/", {
@@ -45,6 +44,16 @@
                 controller: "ProfileController",
                 controllerAs: "model",
                 resolve: {loggedin: checkLoggedin}
+            })
+            .when("/user/:uid/fave", {
+                templateUrl: "views/user/templates/fave.view.client.html",
+                controller: "FaveController",
+                controllerAs: "model",
+            })
+            .when("/user/:uid/pol/:bio", {
+                templateUrl: "views/user/templates/politician.view.client.html",
+                controller: "PoliticianController",
+                controllerAs: "model",
             })
             .when("/user/:uid/district", {
                 templateUrl: "views/user/templates/district.view.client.html",

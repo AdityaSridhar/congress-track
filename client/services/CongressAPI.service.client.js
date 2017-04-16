@@ -9,7 +9,8 @@
             "findRepresentative": findRepresentative,
             "findCongressionalDistrict": findCongressionalDistrict,
             "findSponsoredBills": findSponsoredBills,
-            "findCommittees": findCommittees
+            "findCommittees": findCommittees,
+            "findPolBio" : findPolBio
         };
 
         var urlBase = "https://congress.api.sunlightfoundation.com";
@@ -18,6 +19,12 @@
 
         function findRepresentative(state, district) {
             var url = urlBase + "/legislators?in_office=true&chamber=house&state=" + state + "&district=" + district + "&callback=JSON_CALLBACK";
+            $sce.trustAsResourceUrl(url);
+            return $http.jsonp(url);
+        }
+
+        function findPolBio(bio){
+            var url = urlBase + "/legislators?bioguide_id="+bio+"&all_legislators=true&callback=JSON_CALLBACK";
             $sce.trustAsResourceUrl(url);
             return $http.jsonp(url);
         }

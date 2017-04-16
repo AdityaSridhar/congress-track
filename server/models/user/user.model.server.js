@@ -18,11 +18,11 @@ module.exports = function () {
 
     return api;
 
-    function addToFav(name, id){
+    function addToFav(name, id, bio){
         return UserModel.findById(id)
             .then(function (user){
                 console.log("Model "+user.lof);
-                var nam = {'name' : name};
+                var nam = {'name' : name, 'bioguide' : bio};
                 user.lof.push(nam);
                 return updateUser(user._id, user)
                     .then(function(user){

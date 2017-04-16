@@ -13,7 +13,7 @@ module.exports = function () {
         email: String,
         phone: String,
         address: String,
-        lof : [{name : String}],
+        lof : [{name : String, bioguide : String}],
         // comments: [{type: mongoose.Schema.Types.ObjectId, ref: 'CommentModel'}],
         // votes: [{type: mongoose.Schema.Types.ObjectId, ref: 'VoteModel'}],
         dateCreated: {type: Date, default: Date.now},

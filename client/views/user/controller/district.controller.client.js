@@ -9,9 +9,9 @@
         vm.registerVote = registerVote;
         vm.changeClass= changeClass;
 
-        function changeClass(name){
+        function changeClass(name, bioguide){
 
-            var bod = {'name' : name, 'id' : vm.userId};
+            var bod = {'name' : name, 'id' : vm.userId, 'bioguide' : bioguide};
             if(vm.liked){
                 UserService
                     .removeFromFave(bod)
@@ -74,7 +74,7 @@
                                                             }
                                                             vm.repPhoto = "https://theunitedstates.io/images/congress/original/" + vm.rep.bioguide + ".jpg";
                                                             $sce.trustAsResourceUrl(vm.repPhoto);
-                                                            
+
                                                             CongressAPIService.findSponsoredBills(vm.rep.bioguide)
                                                                 .then(function (bills) {
                                                                     vm.sponsored_bills = bills.data.results;

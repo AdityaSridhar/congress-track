@@ -17,18 +17,19 @@
         </div>
         <div class="navbar-header navbar-text">
             <a class="navbar-brand nav-text" href="#/user/{{model.userId}}/district">
-                My District
+                {{model.polName}}
             </a>
         </div>
     </div>
 </nav>
+
 
 <div class="container">
     <div class="card w-50 text-center profile-card" style="width: 20rem;">
         <img class="card-img-top mugshot" ng-src="{{model.repPhoto}}" alt="Card image cap">
         <i ng-class="{'fa fa-star': model.liked, 'fa fa-star-o': !model.liked}" ng-click="model.changeClass(model.rep.name, model.rep.bioguide)"></i>
         <div class="card-block">
-            <h4 class="card-title">{{model.rep.name}}</h4>
+            <h4 class="card-title">{{model.polName}}</h4>
 
             <h6>Party: {{model.rep.party}}</h6>
             <h6>Term: {{model.rep.term}}</h6>
@@ -77,7 +78,7 @@
                         ng-click="model.registerVote('Downvote', bill.bill_id)"
                         class="btn btn-success fa fa-thumbs-down" data-loading-text=" ... ">
                     <p ng-show="model.bil[bill.bill_id]">{{model.bil[bill.bill_id].downvote}}</p>
-                    </button>
+                </button>
             </div>
         </li>
     </ul>
