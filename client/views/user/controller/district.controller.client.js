@@ -16,7 +16,6 @@
                 UserService
                     .removeFromFave(bod)
                     .then(function(data) {
-                        console.log(JSON.stringify(data));
                         vm.liked = false;
                     },function(){});
             }else{
@@ -24,7 +23,6 @@
                     .addToFave(bod)
                     .then(function(data){
                         vm.liked = true;
-                        console.log(JSON.stringify(data));
                     },function(){})
             }
 
@@ -61,6 +59,19 @@
                                                                 bioguide: representative.bioguide_id,
                                                                 phone: representative.phone
                                                             };
+                                                            var lof = user.data.lof;
+                                                            var check = 0;
+                                                            for(var v in user.data.lof){
+                                                                if(user.data.lof[v].name === vm.rep.name){
+                                                                    check = 1;
+                                                                }
+                                                            }
+
+                                                            if (check == 0){
+                                                                vm.liked = false;
+                                                            }else{
+                                                                vm.liked = true;
+                                                            }
                                                             vm.repPhoto = "https://theunitedstates.io/images/congress/original/" + vm.rep.bioguide + ".jpg";
                                                             $sce.trustAsResourceUrl(vm.repPhoto);
                                                             
@@ -81,19 +92,7 @@
                             })
 
                     }
-                    var lof = user.data.lof;
-                    var check = 0;
-                    for(var v in lof){
-                        if(lof[v].name === vm.rep.name){
-                            check = 1;
-                        }
-                    }
 
-                    if (check == 0){
-                        vm.liked = false;
-                    }else{
-                        vm.liked = true;
-                    }
                 })
         }
 
@@ -105,9 +104,7 @@
             BillService
                 .registerVot(voter, billId)
                 .then(function(bill){
-                    console.log("Vote "+ bill.data.upvote);
                     vm.bil[billId] = {'upvote' : bill.data.upvote, 'downvote' : bill.data.downvote};
-                    console.log(vm.bil[billId].upvote);
                 },function(){});
         }
     }
