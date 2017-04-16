@@ -7,6 +7,23 @@ module.exports = function (app, model){
     app.get("/api/bill", findBill);
     // app.get("/api/bill/:billId", findBillByID);
     app.put("/api/bill/:billId", updateBill);
+    app.get("/api/bill/:billId", findBillById)
+
+    function findBillById(req, res){
+        var billId = req.params.billId;
+
+        model
+            .findBillById(billId)
+            .then(function(bill) {
+                if (bill.length != 0) {
+                    res.json(bill);
+                } else {
+                    res.sendStatus(404);
+                }
+            }, function (err) {
+                    res.sendStatus(404);
+                });
+    }
 
     function findBill(req, res) {
         var billId = req.query.billId;
