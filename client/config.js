@@ -48,12 +48,12 @@
             .when("/user/:uid/fave", {
                 templateUrl: "views/user/templates/fave.view.client.html",
                 controller: "FaveController",
-                controllerAs: "model",
+                controllerAs: "model"
             })
             .when("/user/:uid/pol/:bio", {
                 templateUrl: "views/user/templates/politician.view.client.html",
                 controller: "PoliticianController",
-                controllerAs: "model",
+                controllerAs: "model"
             })
             .when("/user/:uid/district", {
                 templateUrl: "views/user/templates/district.view.client.html",
@@ -63,7 +63,6 @@
             .when("/register", {
                 templateUrl: "views/user/templates/register.view.client.html",
                 controller: "RegisterController",
-                controller: "LoginController",
                 controllerAs: "model"
             })
             .otherwise({redirectTo: '/home'})

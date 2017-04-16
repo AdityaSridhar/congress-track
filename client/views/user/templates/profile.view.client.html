@@ -43,8 +43,13 @@
     <label for="last">Phone</label>
     <input ng-model="model.user.phone" id="last" class="form-control" type="tel" placeholder="(555) 555-5555"/>
 
+    <br>
     <a class="btn btn-primary btn-block" href="#/user/{{model.user._id}}/district">
         My District
+    </a>
+
+    <a class="btn btn-primary btn-block" href="#/user/{{model.user._id}}/fave">
+        My Favorites
     </a>
 
     <a class="btn btn-danger btn-block" ng-click="model.logout()">
