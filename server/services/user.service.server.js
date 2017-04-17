@@ -31,6 +31,8 @@
     app.get("/api/loggedIn", loggedin);
     app.post("/api/user/fave", addToFave);
     app.post("/api/user/fave/remove", removeFromFave);
+    app.post("/api/user/fave/f", addToFaveF);
+    app.post("/api/user/fave/remove/f", removeFromFaveF);
 
     app.get("/auth/facebook", passport.authenticate('facebook', {scope: ['public_profile', 'email']}));
     app.get("/auth/facebook/callback", passport.authenticate('facebook', {
@@ -265,5 +267,36 @@
             res.sendStatus(500).send(error);
         });
     }
+     // var bod = {'name' : name, 'id' : vm.userId, 'fuserId' : id};
+     function addToFaveF(req, res){
+         var bod = req.body;
+         var name = bod.name;
+         var id = bod.id;
+         var fid = bod.fuserId;
+         console.log("From server add to fave :" + name);
+         console.log(id);
+         model.addToFavF(name, id, fid)
+             .then(function(user){
+                 res.json(user);
+             })
+             .catch(function (error) {
+                 res.sendStatus(500).send(error);
+             });
+     }
+
+     function removeFromFaveF(req, res){
+         var bod = req.body;
+         var name = bod.name;
+         var id = bod.id;
+         var fid = bod.fuserId;
+         console.log("Server service R" +bod.id);
+         model.removeFromFavF(name, id, fid)
+             .then(function(user){
+                 res.json(user);
+             })
+             .catch(function (error) {
+                 res.sendStatus(500).send(error);
+             });
+     }
 };
 

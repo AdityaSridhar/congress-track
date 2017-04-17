@@ -14,7 +14,7 @@
         </div>
         <div>
             <p class = "navbar-text pull-left">
-                <a href = "#/user/{{model.userId}}/district" class="navbar-link naviBar">
+                <a href = "#/user/{{model.userId}}/fave" class="navbar-link naviBar">
                     <span class="glyphicon glyphicon-chevron-left"></span>
                 </a>
             </p>
@@ -22,13 +22,17 @@
 
         <div class="navbar-header">
             <a class="navbar-brand naviBar">
-                My Fave
+                {{model.fname}}
             </a>
         </div>
     </div>
 
 </nav>
+
 <div class = "pushDown3 listHandler">
+    <h1>{{model.fname}}
+        <i ng-class="{'fa fa-star': model.liked, 'fa fa-star-o': !model.liked}" ng-click="model.changeClass(model.fuser.username, model.fuser._id)"></i>
+    </h1>
     <h2> Politicians</h2>
 
     <div class="container-fluid">
@@ -75,3 +79,4 @@
         </div>
     </div>
 </nav>
+

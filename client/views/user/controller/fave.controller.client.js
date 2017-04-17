@@ -12,7 +12,8 @@
                 .findUserById(vm.userId)
                 .then(function (user) {
                     vm.user = user.data;
-                    vm.lof = user.data.lof;
+                    vm.lofp = user.data.lof;
+                    vm.lofu = user.data.lofu;
                 })
                 .catch(function (error) {
                     vm.error = "User not found"

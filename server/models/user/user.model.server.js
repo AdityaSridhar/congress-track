@@ -9,7 +9,9 @@ module.exports = function () {
         deleteUser: deleteUser,
         findUserByFacebookId: findUserByFacebookId,
         addToFav : addToFav,
-        removeFromFav : removeFromFav
+        removeFromFav : removeFromFav,
+        addToFavF : addToFavF,
+        removeFromFavF : removeFromFavF,
     };
 
     var mongoose = require('mongoose');
@@ -32,6 +34,19 @@ module.exports = function () {
             });
     }
 
+    function addToFavF(name, id, fid){
+        return UserModel.findById(id)
+            .then(function (user){
+                var nam = {'name' : name, 'fuserId' : fid};
+                user.lofu.push(nam);
+                return updateUser(user._id, user)
+                    .then(function(user){
+                        console.log("after update "+user);
+                        return user;
+                    });
+            });
+    }
+
     function removeFromFav(name, id){
         console.log(name);
         return UserModel.findById(id)
@@ -45,6 +60,32 @@ module.exports = function () {
                 for(var v in user.lof){
                     if(user.lof[v].name === name){
                         user.lof.splice(v, 1);
+                    }
+                }
+
+                //user.lof = tem;
+
+                console.log(user);
+                return updateUser(user._id, user)
+                    .then(function(user){
+                        console.log("Mega user" +user);
+                        return user;
+                    });
+            });
+    }
+    function removeFromFavF(name, id){
+        console.log(name);
+        return UserModel.findById(id)
+            .then(function (user){
+                console.log("Remove function " + user);
+
+                var lofu = user.lofu;
+                var tem = {};
+                console.log("lof "+lofu);
+
+                for(var v in user.lofu){
+                    if(user.lofu[v].name === name){
+                        user.lofu.splice(v, 1);
                     }
                 }
 

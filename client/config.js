@@ -56,6 +56,11 @@
                 controller: "SearchController",
                 controllerAs: "model"
             })
+            .when("/user/:uid/fuser/:fuid", {
+                templateUrl: "views/user/templates/user.view.client.html",
+                controller: "UserController",
+                controllerAs: "model"
+            })
             .when("/user/:uid/fave", {
                 templateUrl: "views/user/templates/fave.view.client.html",
                 controller: "FaveController",

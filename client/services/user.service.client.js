@@ -16,7 +16,9 @@
             "deleteUser": deleteUser,
             "register": register,
             "removeFromFave" : removeFromFave,
-            "addToFave" : addToFave
+            "addToFave" : addToFave,
+            "removeFromFaveF" : removeFromFaveF,
+            "addToFaveF" : addToFaveF,
         };
         return api;
 
@@ -64,6 +66,17 @@
         function addToFave(bod){
             console.log("From slient service "+ bod);
             return $http.post("/api/user/fave/", bod);
+        }
+
+        function removeFromFaveF(bod){
+            var a = $http.post("/api/user/fave/remove/f/", bod);
+            console.log("From client" + JSON.stringify(a));
+            return a;
+        }
+
+        function addToFaveF(bod){
+            console.log("From slient service "+ bod);
+            return $http.post("/api/user/fave/f/", bod);
         }
     }
 })();

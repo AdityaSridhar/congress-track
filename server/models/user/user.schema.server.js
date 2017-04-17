@@ -14,6 +14,7 @@ module.exports = function () {
         phone: String,
         address: String,
         lof : [{name : String, bioguide : String}],
+        lofu : [{name : String, fuserId : String}],
         // comments: [{type: mongoose.Schema.Types.ObjectId, ref: 'CommentModel'}],
         // votes: [{type: mongoose.Schema.Types.ObjectId, ref: 'VoteModel'}],
         dateCreated: {type: Date, default: Date.now},
