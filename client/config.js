@@ -36,8 +36,8 @@
                 controllerAs: "model"
             })
             .when("/guest/pol/:bio", {
-                templateUrl: "views/user/templates/politician.view.client.html",
-                controller: "PoliticianController",
+                templateUrl: "views/user/templates/guest.politician.view.html",
+                controller: "GuestPoliticianController",
                 controllerAs: "model"
             })
             .when("/home", {
