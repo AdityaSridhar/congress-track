@@ -9,7 +9,7 @@
             "getLocation": getLocation
         };
 
-        var urlBase = "http://maps.googleapis.com/maps/api/geocode/json?address=";
+        var urlBase = "https://maps.googleapis.com/maps/api/geocode/json?address=";
 
         return api;
 

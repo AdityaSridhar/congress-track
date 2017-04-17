@@ -10,7 +10,8 @@
             "findCongressionalDistrict": findCongressionalDistrict,
             "findSponsoredBills": findSponsoredBills,
             "findCommittees": findCommittees,
-            "findPolBio" : findPolBio
+            "findPolBio": findPolBio,
+            "findBills": findBills
         };
 
         var urlBase = "https://congress.api.sunlightfoundation.com";
@@ -23,8 +24,8 @@
             return $http.jsonp(url);
         }
 
-        function findPolBio(bio){
-            var url = urlBase + "/legislators?bioguide_id="+bio+"&all_legislators=true&callback=JSON_CALLBACK";
+        function findPolBio(bio) {
+            var url = urlBase + "/legislators?bioguide_id=" + bio + "&all_legislators=true&callback=JSON_CALLBACK";
             $sce.trustAsResourceUrl(url);
             return $http.jsonp(url);
         }
@@ -42,6 +43,12 @@
 
         function findCommittees(member_id) {
             var url = urlBase + "/committees?member_ids=" + member_id + "&callback=JSON_CALLBACK";
+            $sce.trustAsResourceUrl(url);
+            return $http.jsonp(url);
+        }
+
+        function findBills(searchText) {
+            var url = urlBase + "/bills/search?query=" + searchText + "&chamber=house" + "&callback=JSON_CALLBACK";
             $sce.trustAsResourceUrl(url);
             return $http.jsonp(url);
         }

@@ -46,6 +46,13 @@ body{
     color: whitesmoke;
 }
 
+.input[type=search] {
+    margin-right: 5px;
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
 
 body
 {

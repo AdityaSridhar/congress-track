@@ -35,9 +35,9 @@
                 controller: "LoginController",
                 controllerAs: "model"
             })
-            .when("/cards", {
-                templateUrl: "views/homepage/template/cards.html",
-                controller: "HomePageController",
+            .when("/guest/pol/:bio", {
+                templateUrl: "views/user/templates/politician.view.client.html",
+                controller: "PoliticianController",
                 controllerAs: "model"
             })
             .when("/home", {
@@ -71,6 +71,6 @@
                 controller: "RegisterController",
                 controllerAs: "model"
             })
-            .otherwise({redirectTo: '/cards'})
+            .otherwise({redirectTo: '/home'})
     }
 })();
