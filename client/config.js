@@ -51,6 +51,11 @@
                 controllerAs: "model",
                 resolve: {loggedin: checkLoggedin}
             })
+            .when("/user/:uid/search", {
+                templateUrl: "views/user/templates/search.view.client.html",
+                controller: "SearchController",
+                controllerAs: "model"
+            })
             .when("/user/:uid/fave", {
                 templateUrl: "views/user/templates/fave.view.client.html",
                 controller: "FaveController",

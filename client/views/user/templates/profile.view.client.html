@@ -1,13 +1,28 @@
-<nav class="navbar navbar-fixed-top navbar-light bg-primary">
+<nav class="navbar navbar-fixed-top navbar-inverse bg-inverse">
     <div class="container-fluid">
-        <div class="navbar-text pull-right">
-            <a class="nav-text" ng-click="model.updateUser(model.user)">
-                <span class="glyphicon glyphicon-check"></span>
+        <div class="navbar-text pull-left">
+            <a class="nav-text" href="#/user/{{model.userId}}">
+                <span class="glyphicon glyphicon-chevron-left"></span>
             </a>
         </div>
-        <div class="navbar-header">
-            <a class="navbar-brand nav-text" href="#/user/{{model.user._id}}">
-                Profile
+        <div class="navbar-text">
+            <a class="nav-text" href="#/user/{{model.userId}}">
+                <span class="fa fa-user-o"></span>
+            </a>
+        </div>
+        <div class="navbar-text">
+            <a class="nav-text" href="#/user/{{model.userId}}/fave">
+                <span class="fa fa-star-o"></span>
+            </a>
+        </div>
+        <div class="navbar-header navbar-text">
+            <a class="navbar-brand nav-text" href="#/user/{{model.userId}}/district">
+                My Profile
+            </a>
+        </div>
+        <div class="navbar-text">
+            <a class="nav-text" href="#/user/{{model.userId}}/search">
+                <span class="fa fa-search"></span>
             </a>
         </div>
     </div>

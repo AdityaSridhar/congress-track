@@ -1,0 +1,96 @@
+<nav class="navbar navbar-fixed-top navbar-inverse bg-inverse">
+    <div class="container-fluid">
+        <div class="navbar-text pull-left">
+            <a class="nav-text" href="#/user/{{model.userId}}">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+        </div>
+        <div class="navbar-text">
+            <a class="nav-text" href="#/user/{{model.userId}}">
+                <span class="fa fa-user-o"></span>
+            </a>
+        </div>
+        <div class="navbar-text">
+            <a class="nav-text" href="#/user/{{model.userId}}/fave">
+                <span class="fa fa-star-o"></span>
+            </a>
+        </div>
+        <div class="navbar-header navbar-text">
+            <a class="navbar-brand nav-text" href="#/user/{{model.userId}}/district">
+                Search
+            </a>
+        </div>
+        <div class="navbar-text">
+            <a class="nav-text" href="#/user/{{model.userId}}/search">
+                <span class="fa fa-search"></span>
+            </a>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid website-list">
+<div class="card w-50 text-center profile-card" style="width: 20rem;">
+    <div class="alert alert-danger" ng-show="model.error">
+        {{model.error}}
+    </div>
+
+    <label for="rep-search">Know your Representative</label>
+    <div>
+        <input ng-model="model.repSearchText" type="search" class="form-control pull-left col-10" id="rep-search"
+               placeholder="360 Huntington Avenue, Boston, MA"/>
+        <a class="btn btn-primary pull-right" ng-click="model.searchRep()">
+            <span class="fa fa-search"></span>
+        </a>
+    </div>
+
+    <label for="bill-search">Search for a bill in the U.S. House of Representatives</label>
+    <div>
+        <input ng-model="model.billSearchText" type="search" class="form-control pull-left col-10" id="bill-search"
+               placeholder="Health Care Reform"/>
+        <a class="btn btn-primary pull-right" ng-click="model.searchBill()">
+            <span class="fa fa-search"></span>
+        </a>
+    </div>
+</div>
+
+<div class="card w-50 profile-card" ng-show="model.hasRepSearchResults">
+    <li class="media list-group-item">
+        <img ng-src="{{model.repPhoto}}" alt="" class="img-circle mugshot">
+        <div class="media-body">
+            <a href="#/user/{{model.userId}}/pol/{{model.rep.bioguide}}">
+                <strong class="text-success">{{model.rep.name}}</strong>
+            </a>
+            <p>
+                Represents Congressional District {{model.rep.district}} of the state of {{model.rep.state}}
+            </p>
+        </div>
+    </li>
+</div>
+
+<ul ng-show="model.hasBillSearchResults" class="list-group">
+    <li ng-repeat="bill in model.bills" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+            <a class="mb-1" href="{{bill.urls.congress}}" target="_blank">{{bill.bill_id}}</a>
+            <small>Introduced on {{bill.introduced_on}}</small>
+        </div>
+        <p class="mb-1">{{bill.official_title}}</p>
+    </li>
+</ul>
+
+<!--<li class="media">-->
+<!--<a href="#" class="pull-left">-->
+<!--<img src="assets/img/1.png" alt="" class="img-circle">-->
+<!--</a>-->
+<!--<div class="media-body">-->
+<!--<span class="text-muted pull-right">-->
+<!--<small class="text-muted">30 min ago</small>-->
+<!--</span>-->
+<!--<strong class="text-success">@ Rexona Kumi</strong>-->
+<!--<p>-->
+<!--Lorem ipsum dolor sit amet, consectetur adipiscing elit.-->
+<!--Lorem ipsum dolor sit amet, <a href="#"># consectetur adipiscing </a>.-->
+<!--</p>-->
+<!--</div>-->
+<!--</li>-->
+
+</div>

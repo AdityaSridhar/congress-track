@@ -3,7 +3,7 @@
         .module("CongressTracker")
         .controller("HomePageController", HomePageController);
 
-    function HomePageController(GeoLocationService, CongressAPIService) {
+    function HomePageController(GeoLocationService, CongressAPIService, $sce) {
         var vm = this;
         vm.repSearchText = null;
         vm.billSearchText = null;

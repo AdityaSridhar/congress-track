@@ -89,17 +89,17 @@
                         CongressAPIService.findSponsoredBills(vm.rep.bioguide)
                             .then(function (bills) {
                                 vm.sponsored_bills = bills.data.results;
-                                for(var s in vm.sponsored_bills){
-                                    BillService
-                                        .getBillInfo(vm.sponsored_bills[s].bill_id)
-                                        .then(function(bill){
-                                            console.log("Bill "+JSON.stringify(bill));
-                                            vm.bil[bill.data.billId] = {'upvote' : bill.data.upvote, 'downvote' : bill.data.downvote};
-                                        })
-                                        .catch (function(error){
-                                            vm.bil[vm.sponsored_bills[s].bill_id] = {'upvote' : 0, 'downvote' : 0};
-                                        });
-                                }
+                                // for(var s in vm.sponsored_bills){
+                                //     BillService
+                                //         .getBillInfo(vm.sponsored_bills[s].bill_id)
+                                //         .then(function(bill){
+                                //             console.log("Bill "+JSON.stringify(bill));
+                                //             vm.bil[bill.data.billId] = {'upvote' : bill.data.upvote, 'downvote' : bill.data.downvote};
+                                //         })
+                                //         .catch (function(error){
+                                //             vm.bil[vm.sponsored_bills[s].bill_id] = {'upvote' : 0, 'downvote' : 0};
+                                //         });
+                                // }
                             });
 
                         CongressAPIService.findCommittees(vm.rep.bioguide)
