@@ -31,8 +31,8 @@
                 controllerAs: "model"
             })
             .when("/", {
-                templateUrl: "views/user/templates/login.view.client.html",
-                controller: "LoginController",
+                templateUrl: "views/homepage/template/homepage.view.client.html",
+                controller: "HomePageController",
                 controllerAs: "model"
             })
             .when("/guest/pol/:bio", {
