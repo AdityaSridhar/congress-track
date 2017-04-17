@@ -21,7 +21,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="search.view.client.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="search.view.client.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/views/user/templates/search.view.client.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="946">
@@ -41,12 +41,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/index.html">
+      <file leaf-file-name="register.view.client.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/views/user/templates/register.view.client.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="49" lean-forward="true" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
+            <state relative-caret-position="110">
+              <caret line="5" column="73" lean-forward="false" selection-start-line="5" selection-start-column="73" selection-end-line="5" selection-end-column="73" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="homepage.view.client.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/views/homepage/template/homepage.view.client.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="6" column="66" lean-forward="false" selection-start-line="6" selection-start-column="66" selection-end-line="6" selection-end-column="66" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#p#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#p#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -113,16 +127,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="politician.controller.client.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/views/user/controller/politician.controller.client.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="18" column="23" lean-forward="false" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -163,7 +167,6 @@
         <option value="$PROJECT_DIR$/client/views/user/templates/login.view.client.html" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/client/views/user/controller/register.controller.client.js" />
-        <option value="$PROJECT_DIR$/client/views/user/templates/register.view.client.html" />
         <option value="$PROJECT_DIR$/client/views/user/controller/profile.controller.client.js" />
         <option value="$PROJECT_DIR$/client/views/user/controller/district.controller.js" />
         <option value="$PROJECT_DIR$/client/services/district.service.client.js" />
@@ -189,7 +192,6 @@
         <option value="$PROJECT_DIR$/client/config.js" />
         <option value="$PROJECT_DIR$/client/views/user/controller/search.controller.client.js" />
         <option value="$PROJECT_DIR$/client/views/user/controller/politician.controller.client.js" />
-        <option value="$PROJECT_DIR$/client/views/homepage/template/homepage.view.client.html" />
         <option value="$PROJECT_DIR$/client/index.html" />
         <option value="$PROJECT_DIR$/client/css/style.css" />
         <option value="$PROJECT_DIR$/client/views/user/templates/district.view.client.html" />
@@ -197,6 +199,8 @@
         <option value="$PROJECT_DIR$/client/views/user/templates/profile.view.client.html" />
         <option value="$PROJECT_DIR$/client/views/user/templates/politician.view.client.html" />
         <option value="$PROJECT_DIR$/client/views/user/templates/search.view.client.html" />
+        <option value="$PROJECT_DIR$/client/views/homepage/template/homepage.view.client.html" />
+        <option value="$PROJECT_DIR$/client/views/user/templates/register.view.client.html" />
       </list>
     </option>
   </component>
@@ -922,7 +926,7 @@
       <workItem from="1492230686588" duration="662000" />
       <workItem from="1492231775799" duration="312000" />
       <workItem from="1492232109371" duration="40104000" />
-      <workItem from="1492447051507" duration="5333000" />
+      <workItem from="1492447051507" duration="5771000" />
     </task>
     <task id="LOCAL-00001" summary="Fixing HomePageController error.">
       <created>1491432204922</created>
@@ -963,7 +967,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130059000" />
+    <option name="totallyTimeSpent" value="130497000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1273,31 +1277,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/user/templates/register.view.client.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/views/homepage/controller/homepage.controller.client.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/homepage/template/homepage.view.client.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="4" selection-end-line="18" selection-end-column="10" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#p#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#p#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1379,6 +1363,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="946">
           <caret line="43" column="12" lean-forward="true" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/homepage/template/homepage.view.client.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="66" lean-forward="false" selection-start-line="6" selection-start-column="66" selection-end-line="6" selection-end-column="66" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#p#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#p#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/user/templates/register.view.client.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="73" lean-forward="false" selection-start-line="5" selection-start-column="73" selection-end-line="5" selection-end-column="73" />
           <folding />
         </state>
       </provider>
