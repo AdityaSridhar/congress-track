@@ -1,34 +1,35 @@
 <nav class="navbar navbar-fixed-top navbar-inverse bg-inverse">
     <div class="container-fluid">
-        <div class="navbar-text pull-left">
-            <a class="nav-text" href="#/user/{{model.userId}}">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-            </a>
+        <div>
+            <p class="navbar-text pull-right">
+                <a  href="#/user/{{model.userId}}/search" class="navbar-link naviBar">
+                    <span class="glyphicon glyphicon-search">
+                    </span>
+                </a>
+                <a  href="#/user/{{model.userId}}/fave" class="navbar-link naviBar l-pad">
+                    <span class="glyphicon glyphicon-star-empty">
+                    </span>
+                </a>
+            </p>
         </div>
-        <div class="navbar-text">
-            <a class="nav-text" href="#/user/{{model.userId}}">
-                <span class="fa fa-user-o"></span>
-            </a>
+        <div>
+            <p class = "navbar-text pull-left">
+                <a href = "#/user/{{model.userId}}/fave" class="navbar-link naviBar">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+            </p>
         </div>
-        <div class="navbar-text">
-            <a class="nav-text" href="#/user/{{model.userId}}/fave">
-                <span class="fa fa-star-o"></span>
-            </a>
-        </div>
-        <div class="navbar-header navbar-text">
-            <a class="navbar-brand nav-text" href="#/user/{{model.userId}}/district">
+
+        <div class="navbar-header">
+            <a class="navbar-brand naviBar">
                 Search
             </a>
         </div>
-        <div class="navbar-text">
-            <a class="nav-text" href="#/user/{{model.userId}}/search">
-                <span class="fa fa-search"></span>
-            </a>
-        </div>
     </div>
+
 </nav>
 
-<div class="container-fluid website-list">
+<div class="container-fluid website-list pushDown3 listHandler">
 <div class="card w-50 text-center profile-card" style="width: 20rem;">
     <div class="alert alert-danger" ng-show="model.error">
         {{model.error}}
@@ -94,3 +95,18 @@
 <!--</li>-->
 
 </div>
+
+<nav class="navbar navbar-inverse bg-inverse navbar-fixed-bottom">
+    <div class="container-fluid">
+        <div class="navbar-text pull-left">
+            <a class="nav-text" ng-click="model.unregisterUser()">
+                <span class="glyphicon glyphicon-trash"></span>
+            </a>
+        </div>
+        <div class="navbar-text pull-right">
+            <a class="nav-text" href="#/user/{{model.userId}}">
+                <span class="glyphicon glyphicon-user"></span>
+            </a>
+        </div>
+    </div>
+</nav>

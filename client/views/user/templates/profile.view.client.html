@@ -1,34 +1,52 @@
+<!--<nav class="navbar navbar-fixed-top navbar-inverse bg-inverse">-->
+    <!--<div class="container-fluid">-->
+        <!--&lt;!&ndash;<div class="navbar-text">&ndash;&gt;-->
+            <!--&lt;!&ndash;<a class="nav-text pull-right" href="#/user/{{model.userId}}">&ndash;&gt;-->
+                <!--&lt;!&ndash;<span class="fa fa-user-o"></span>&ndash;&gt;-->
+            <!--&lt;!&ndash;</a>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--<div class="navbar-text">-->
+            <!--<p class="nav-text pull-right  l-pad ">-->
+            <!--<a href="#/user/{{model.userId}}/fave">-->
+                <!--<span class="glyphicon glyphicon-star-empty"></span>-->
+            <!--</a>-->
+            <!--<a href="#/user/{{model.userId}}/search">-->
+                <!--<span class="glyphicon glyphicon-search"></span>-->
+            <!--</a>-->
+            <!--</p>-->
+        <!--</div>-->
+        <!--<div class="navbar-header center">-->
+            <!--<a class="navbar-brand naviBar" href="#/user/{{model.user._id}}">-->
+                <!--Profile-->
+            <!--</a>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</nav>-->
 <nav class="navbar navbar-fixed-top navbar-inverse bg-inverse">
     <div class="container-fluid">
-        <div class="navbar-text pull-left">
-            <a class="nav-text" href="#/user/{{model.userId}}">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-            </a>
+        <div>
+            <p class="navbar-text pull-right">
+                <a  href="#/user/{{model.userId}}/search" class="navbar-link naviBar">
+                    <span class="glyphicon glyphicon-search">
+                    </span>
+                </a>
+                <a  href="#/user/{{model.userId}}/fave" class="navbar-link naviBar l-pad">
+                    <span class="glyphicon glyphicon-star-empty">
+                    </span>
+                </a>
+            </p>
         </div>
-        <div class="navbar-text">
-            <a class="nav-text" href="#/user/{{model.userId}}">
-                <span class="fa fa-user-o"></span>
-            </a>
-        </div>
-        <div class="navbar-text">
-            <a class="nav-text" href="#/user/{{model.userId}}/fave">
-                <span class="fa fa-star-o"></span>
-            </a>
-        </div>
-        <div class="navbar-header navbar-text">
-            <a class="navbar-brand nav-text" href="#/user/{{model.userId}}/district">
-                My Profile
-            </a>
-        </div>
-        <div class="navbar-text">
-            <a class="nav-text" href="#/user/{{model.userId}}/search">
-                <span class="fa fa-search"></span>
+
+        <div class="navbar-header">
+            <a class="navbar-brand naviBar">
+                Profile
             </a>
         </div>
     </div>
+
 </nav>
 
-<div class="container-fluid website-list">
+<div class="container-fluid website-list pushDown listHandler">
 
     <div class="alert alert-danger" ng-show="model.error">
         {{model.error}}
@@ -66,13 +84,13 @@
     <a class="btn btn-primary btn-block" href="#/user/{{model.user._id}}/fave">
         My Favorites
     </a>
-
+    <div class = "d-pad">
     <a class="btn btn-danger btn-block" ng-click="model.logout()">
         Logout
-    </a>
+    </a></div>
 </div>
 
-<nav class="navbar navbar-light navbar-fixed-bottom bg-primary">
+<nav class="navbar navbar-inverse bg-inverse navbar-fixed-bottom">
     <div class="container-fluid">
         <div class="navbar-text pull-left">
             <a class="nav-text" ng-click="model.unregisterUser()">
