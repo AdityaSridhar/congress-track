@@ -9,6 +9,7 @@
         vm.registerVote = registerVote;
         vm.bil = {};
         vm.liked = false;
+        vm.errorVote = {};
 
         vm.changeClass= changeClass;
 
@@ -17,8 +18,8 @@
 
         }
 
-        function registerVote(){
-            vm.errorVote = "Please sign in or register to vote on this bill.";
+        function registerVote(id){
+            vm.errorVote[id] = "Please sign in or register to vote on this bill.";
         }
 
         function init() {

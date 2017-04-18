@@ -59,14 +59,13 @@
 
     <br>
 
-    <div ng-show="model.errorVote" class="alert alert-danger" role="alert">
-        {{model.errorVote}}
-    </div>
-
     <h4 class="text-center">Sponsored Bills</h4>
     <ul class="list-group">
         <li ng-repeat="bill in model.sponsored_bills" class="list-group-item list-group-item-action flex-column align-items-start">
             <div class="d-flex w-100 justify-content-between">
+                <div ng-show="model.errorVote[bill.bill_id]" class="alert alert-danger" role="alert">
+                    {{model.errorVote[bill.bill_id]}}
+                </div>
                 <a class="mb-1" href="{{bill.urls.congress}}" target="_blank">{{bill.bill_id}}</a>
                 <small>Introduced on {{bill.introduced_on}}</small>
             </div>
@@ -74,11 +73,11 @@
             <div>
                 <button type="button"
                         id="testBtn"
-                        ng-click="model.registerVote()"
+                        ng-click="model.registerVote(bill.bill_id)"
                         class="btn btn-success fa fa-thumbs-up"
                         data-loading-text=" ... "><p ng-show="model.bil[bill.bill_id]">{{model.bil[bill.bill_id].upvote}}</p></button>
                 <button type="button" id="testBtnDown"
-                        ng-click="model.registerVote()"
+                        ng-click="model.registerVote(bill.bill_id)"
                         class="btn btn-success fa fa-thumbs-down" data-loading-text=" ... ">
                     <p ng-show="model.bil[bill.bill_id]">{{model.bil[bill.bill_id].downvote}}</p>
                 </button>
