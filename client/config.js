@@ -40,6 +40,11 @@
                 controller: "GuestPoliticianController",
                 controllerAs: "model"
             })
+            .when("/guest/search/", {
+                templateUrl: "views/user/templates/guest.search.view.client.html",
+                controller: "GuestSearchController",
+                controllerAs: "model"
+            })
             .when("/home", {
                 templateUrl: "views/homepage/template/homepage.view.client.html",
                 controller: "HomePageController",
