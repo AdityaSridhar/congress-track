@@ -31,6 +31,13 @@
 
 <div class="container website-list pushDown3 listHandler">
     <div class="row">
+        <div class="alert alert-danger" ng-show="model.error">
+            {{model.error}}
+        </div>
+
+        <div class="alert alert-info" ng-show="model.message">
+            {{model.message}}
+        </div>
         <div class="text-center">
             <label for="rep-search">Know your Representative</label>
             <div class="row">

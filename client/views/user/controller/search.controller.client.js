@@ -18,20 +18,21 @@
         vm.billSearchText = null;
         vm.userSearchText = null;
 
-        function registerVote(vote, billId){
-            var voter = {'id' : vm.userId,
-                'vote' : vote};
+        function registerVote(vote, billId) {
+            var voter = {
+                'id': vm.userId,
+                'vote': vote
+            };
             BillService
                 .registerVot(voter, billId)
-                .then(function(bill){
-                    vm.bil[billId] = {'upvote' : bill.data.upvote, 'downvote' : bill.data.downvote};
-                },function(){});
+                .then(function (bill) {
+                    vm.bil[billId] = {'upvote': bill.data.upvote, 'downvote': bill.data.downvote};
+                }, function () {
+                });
         }
 
         function searchRep() {
-            vm.error = "";
-            vm.hasRepSearchResults = false;
-            vm.hasBillSearchResults = false;
+            setVarsToDefault();
             if (vm.repSearchText) {
                 GeoLocationService.getLocation(vm.repSearchText)
                     .then(function (location) {
@@ -44,7 +45,7 @@
                                                 var districtNumber = district.data.results[0].district;
                                                 CongressAPIService.findRepresentative(state, districtNumber)
                                                     .then(function (res) {
-                                                        if (res.data) {
+                                                        if (res.data && res.data.results && res.data.results.length > 0) {
                                                             vm.hasRepSearchResults = true;
                                                             var representative = res.data.results[0];
                                                             vm.rep = {
@@ -55,6 +56,9 @@
                                                             };
                                                             vm.repPhoto = "https://theunitedstates.io/images/congress/original/" + vm.rep.bioguide + ".jpg";
                                                             $sce.trustAsResourceUrl(vm.repPhoto);
+                                                        }
+                                                        else{
+                                                            vm.message = "Please verify if the address entered is valid."
                                                         }
                                                     })
                                             }
@@ -72,49 +76,55 @@
                     });
 
             }
-            else{
+            else {
                 vm.error = "Please enter an address";
             }
         }
 
         function searchBill() {
-            vm.error = "";
-            vm.hasRepSearchResults = false;
-            vm.hasBillSearchResults = false;
-            if(vm.billSearchText){
+            setVarsToDefault();
+            if (vm.billSearchText) {
                 CongressAPIService.findBills(vm.billSearchText)
                     .then(function (bills) {
-                        if(bills.data){
+                        if (bills.data && bills.data.results && bills.data.results.length > 0) {
                             vm.hasBillSearchResults = true;
                             vm.bills = bills.data.results;
                         }
+                        else {
+                            vm.message = "No bill found pertaining to the search text";
+                        }
                     })
             }
-            else{
+            else {
                 vm.error = "Please enter relevant information in the bill search"
             }
         }
 
         function searchUser() {
-            vm.error = "";
-            vm.hasRepSearchResults = false;
-            vm.hasBillSearchResults = false;
-            vm.hasUserSearchResults = false;
-            if(vm.userSearchText){
+            setVarsToDefault();
+            if (vm.userSearchText) {
                 UserService.findUserMatches(vm.userSearchText)
                     .then(function (res) {
-                        if(res.data){
+                        if (res.data && res.data.length > 0) {
                             vm.hasUserSearchResults = true;
                             vm.users = res.data;
                         }
-                        else{
+                        else {
                             vm.message = "No such user exists.";
                         }
                     })
                     .catch(function (error) {
-                        vm.error = "Oops. Something went wrong: "+ error;
+                        vm.error = "Oops. Something went wrong: " + error;
                     })
             }
+        }
+
+        function setVarsToDefault() {
+            vm.error = "";
+            vm.message = "";
+            vm.hasRepSearchResults = false;
+            vm.hasBillSearchResults = false;
+            vm.hasUserSearchResults = false;
         }
     }
 })();
