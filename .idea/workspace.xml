@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6cd0cb36-be5f-486c-84a2-e0522f70f6d0" name="Default" comment="UI changes to Home Page">
+    <list default="true" id="6cd0cb36-be5f-486c-84a2-e0522f70f6d0" name="Default" comment="Profile View Update icon.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/config.js" afterPath="$PROJECT_DIR$/client/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/user/controller/admin.controller.client.js" afterPath="$PROJECT_DIR$/client/views/user/controller/admin.controller.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/user/templates/admin.view.client.html" afterPath="$PROJECT_DIR$/client/views/user/templates/admin.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/user/templates/profile.view.client.html" afterPath="$PROJECT_DIR$/client/views/user/templates/profile.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/models/user/user.model.server.js" afterPath="$PROJECT_DIR$/server/models/user/user.model.server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/homepage/template/homepage.view.client.html" afterPath="$PROJECT_DIR$/client/views/homepage/template/homepage.view.client.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/services/user.service.server.js" afterPath="$PROJECT_DIR$/server/services/user.service.server.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,103 +23,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="login.view.client.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/views/user/templates/login.view.client.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="903">
-              <caret line="43" column="18" lean-forward="false" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
-              <folding>
-                <element signature="n#style#0;n#text#0;n#div#0;n#a#0;n#div#3;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <marker date="1492213110589" expanded="true" signature="6247:6258" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin.view.client.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client/views/user/templates/admin.view.client.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="43" column="42" lean-forward="true" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
-              <folding>
-                <element signature="n#style#0;n#a#0;n#div#0;n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#1;n#div#0;n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="profile.view.client.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/views/user/templates/profile.view.client.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="61" column="20" lean-forward="true" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
+            <state relative-caret-position="231">
+              <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="district.view.client.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/views/user/templates/district.view.client.html">
+      <file leaf-file-name="homepage.view.client.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/views/homepage/template/homepage.view.client.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="5" column="29" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="7" selection-end-column="20" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <marker date="1492755449043" expanded="true" signature="4148:4149" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="district.controller.client.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/views/user/controller/district.controller.client.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" column="20" lean-forward="true" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user.service.server.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/services/user.service.server.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="165" column="16" lean-forward="false" selection-start-line="165" selection-start-column="16" selection-end-line="165" selection-end-column="16" />
-              <folding>
-                <marker date="1492755085103" expanded="true" signature="9274:9287" ph="{...}" />
-                <marker date="1492755085103" expanded="true" signature="10387:10391" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="611">
-              <caret line="260" column="11" lean-forward="false" selection-start-line="260" selection-start-column="1" selection-end-line="260" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin.controller.client.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/views/user/controller/admin.controller.client.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" column="38" lean-forward="false" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/config.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="53" column="30" lean-forward="false" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="30" />
+            <state relative-caret-position="404">
+              <caret line="52" column="6" lean-forward="true" selection-start-line="52" selection-start-column="6" selection-end-line="52" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -131,8 +46,78 @@
       <file leaf-file-name="user.model.server.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/models/user/user.model.server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2772">
-              <caret line="132" column="26" lean-forward="false" selection-start-line="132" selection-start-column="26" selection-end-line="132" selection-end-column="26" />
+            <state relative-caret-position="3045">
+              <caret line="145" column="15" lean-forward="false" selection-start-line="145" selection-start-column="15" selection-end-line="145" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.service.server.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server/services/user.service.server.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="630">
+              <caret line="33" column="74" lean-forward="true" selection-start-line="33" selection-start-column="74" selection-end-line="33" selection-end-column="74" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="register.view.client.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/views/user/templates/register.view.client.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="382">
+              <caret line="79" column="45" lean-forward="true" selection-start-line="79" selection-start-column="45" selection-end-line="79" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="register.controller.client.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/views/user/controller/register.controller.client.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="558">
+              <caret line="58" column="9" lean-forward="true" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="geolocation.service.client.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/services/geolocation.service.client.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="search.controller.client.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/views/user/controller/search.controller.client.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1260">
+              <caret line="60" column="120" lean-forward="false" selection-start-line="60" selection-start-column="120" selection-end-line="60" selection-end-column="120" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="search.view.client.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/views/user/templates/search.view.client.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5586">
+              <caret line="266" column="1" lean-forward="false" selection-start-line="266" selection-start-column="1" selection-end-line="266" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -155,6 +140,8 @@
       <find>wrap</find>
       <find>backgr</find>
       <find>delet</find>
+      <find>login</find>
+      <find>update</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -181,38 +168,39 @@
         <option value="$PROJECT_DIR$/server/models/models.server.js" />
         <option value="$PROJECT_DIR$/server/app.js" />
         <option value="$PROJECT_DIR$/client/services/CongressAPI.service.js" />
-        <option value="$PROJECT_DIR$/client/views/user/templates/login.view.client.html" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/client/views/user/controller/login.controller.client.js" />
-        <option value="$PROJECT_DIR$/client/views/user/templates/register.view.client.html" />
-        <option value="$PROJECT_DIR$/client/views/user/controller/profile.controller.client.js" />
         <option value="$PROJECT_DIR$/client/views/user/controller/district.controller.js" />
         <option value="$PROJECT_DIR$/client/services/district.service.client.js" />
         <option value="$PROJECT_DIR$/server.js" />
-        <option value="$PROJECT_DIR$/client/css/login.css" />
         <option value="$PROJECT_DIR$/client/views/user/controller/district.controller.client.js" />
         <option value="$PROJECT_DIR$/server/services/bill.service.server.js" />
-        <option value="$PROJECT_DIR$/client/services/geolocation.service.client.js" />
         <option value="$PROJECT_DIR$/client/services/CongressAPI.service.client.js" />
         <option value="$PROJECT_DIR$/client/views/user/controller/politician.controller.client.js" />
         <option value="$PROJECT_DIR$/client/views/homepage/controller/homepage.controller.client.js" />
-        <option value="$PROJECT_DIR$/client/views/user/templates/search.view.client.html" />
-        <option value="$PROJECT_DIR$/client/views/user/controller/register.controller.client.js" />
         <option value="$PROJECT_DIR$/server/models/user/user.schema.server.js" />
         <option value="$PROJECT_DIR$/client/views/user/templates/guest.search.view.client.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/client/views/homepage/template/homepage.view.client.html" />
         <option value="$PROJECT_DIR$/client/views/guest/template/guest.politician.view.html" />
-        <option value="$PROJECT_DIR$/client/services/user.service.client.js" />
-        <option value="$PROJECT_DIR$/server/services/user.service.server.js" />
         <option value="$PROJECT_DIR$/client/index.html" />
         <option value="$PROJECT_DIR$/client/views/user/templates/district.view.client.html" />
-        <option value="$PROJECT_DIR$/client/css/style.css" />
-        <option value="$PROJECT_DIR$/server/models/user/user.model.server.js" />
         <option value="$PROJECT_DIR$/client/config.js" />
-        <option value="$PROJECT_DIR$/client/views/user/templates/profile.view.client.html" />
         <option value="$PROJECT_DIR$/client/views/user/controller/admin.controller.client.js" />
         <option value="$PROJECT_DIR$/client/views/user/templates/admin.view.client.html" />
+        <option value="$PROJECT_DIR$/client/views/user/templates/login.view.client.html" />
+        <option value="$PROJECT_DIR$/client/css/login.css" />
+        <option value="$PROJECT_DIR$/server/models/user/user.model.server.js" />
+        <option value="$PROJECT_DIR$/client/services/user.service.client.js" />
+        <option value="$PROJECT_DIR$/client/views/user/controller/profile.controller.client.js" />
+        <option value="$PROJECT_DIR$/client/css/style.css" />
+        <option value="$PROJECT_DIR$/client/views/user/controller/search.controller.client.js" />
+        <option value="$PROJECT_DIR$/client/views/user/templates/search.view.client.html" />
+        <option value="$PROJECT_DIR$/client/views/user/templates/profile.view.client.html" />
+        <option value="$PROJECT_DIR$/client/views/user/controller/register.controller.client.js" />
+        <option value="$PROJECT_DIR$/client/services/geolocation.service.client.js" />
+        <option value="$PROJECT_DIR$/client/views/user/templates/register.view.client.html" />
+        <option value="$PROJECT_DIR$/client/views/homepage/template/homepage.view.client.html" />
+        <option value="$PROJECT_DIR$/server/services/user.service.server.js" />
       </list>
     </option>
   </component>
@@ -246,6 +234,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -570,7 +559,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -595,284 +583,6 @@
       <recent name="Z:\Courses\Spring 2017\CS5610 - Web Dev\SourceCode\congress-track\server\models" />
       <recent name="Z:\Courses\Spring 2017\CS5610 - Web Dev\SourceCode\congress-track\server\services" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/client/services/CongressAPI.service.client.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/client/views/guest/template/guest.politician.view.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/client/views/guest/template/guest.search.view.client.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/client/views/homepage/template/homepage.view.client.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/client/views/user/controller/district.controller.client.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/accepts/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/append-field/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/array-flatten/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/async/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/bluebird/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/body-parser/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/bson/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/buffer-shims/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/busboy/node_modules/isarray/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/busboy/node_modules/readable-stream/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/busboy/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/bytes/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/concat-stream/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/content-disposition/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/content-type/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/cookie-parser/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/cookie-signature/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/cookie/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/core-util-is/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/crc/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/debug/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/depd/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/destroy/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/dicer/node_modules/isarray/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/dicer/node_modules/readable-stream/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/dicer/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/ee-first/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/encodeurl/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/es6-promise/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/escape-html/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/etag/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/express-session/node_modules/debug/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/express-session/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/express/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/finalhandler/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/forwarded/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/fresh/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/hooks-fixed/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/http-errors/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/iconv-lite/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/inherits/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/ipaddr.js/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/isarray/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/kareem/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/lodash/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/media-typer/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/merge-descriptors/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/methods/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/mime-db/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/mime-types/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/mime/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/minimist/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/mkdirp/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/mongodb-core/HISTORY.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/mongodb-core/lib/connection/commands.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/mongodb-core/lib/connection/connection.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/mongodb-core/lib/connection/pool.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/mongodb-core/lib/topologies/mongos.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/mongodb-core/lib/topologies/replset.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/mongodb-core/lib/topologies/server.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/mongodb-core/lib/topologies/shared.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/mongodb-core/lib/wireprotocol/2_4_support.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/mongodb-core/lib/wireprotocol/2_6_support.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/mongodb-core/lib/wireprotocol/3_2_support.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/mongodb-core/lib/wireprotocol/commands.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/mongodb-core/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/mongodb/HISTORY.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/mongodb/lib/admin.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/mongodb/lib/apm.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/mongodb/lib/collection.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/mongodb/lib/cursor.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/mongodb/lib/db.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/mongodb/lib/mongos.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/mongodb/lib/replset.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/mongodb/lib/server.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/mongodb/lib/utils.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/mongodb/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/mongoose/.travis.yml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/mongoose/History.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/mongoose/lib/document.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/mongoose/lib/model.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/mongoose/lib/schema.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/mongoose/lib/schema/array.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/mongoose/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/mpath/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/mpromise/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/mquery/node_modules/sliced/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/mquery/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/ms/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/multer/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/muri/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/negotiator/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/object-assign/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/on-finished/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/on-headers/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/parseurl/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/passport-local/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/passport-strategy/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/passport/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/path-to-regexp/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/pause/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/process-nextick-args/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/proxy-addr/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/q/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/qs/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/random-bytes/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/range-parser/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/raw-body/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/readable-stream/.npmignore</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/readable-stream/.travis.yml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/readable-stream/LICENSE</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/readable-stream/README.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/readable-stream/duplex.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/readable-stream/lib/_stream_readable.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/readable-stream/lib/_stream_transform.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/readable-stream/lib/_stream_writable.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/readable-stream/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/readable-stream/passthrough.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/readable-stream/readable.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/readable-stream/transform.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/readable-stream/writable.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/regexp-clone/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/require_optional/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/resolve-from/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/semver/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/send/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/serve-static/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/setprototypeof/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/sliced/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/statuses/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/streamsearch/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/string_decoder/LICENSE</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/string_decoder/README.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/string_decoder/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/type-is/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/typedarray/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/uid-safe/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/unpipe/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/util-deprecate/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/utils-merge/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/vary/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/xtend/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/server.js</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/concat-stream/node_modules/readable-stream/.npmignore</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/concat-stream/node_modules/readable-stream/.travis.yml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/concat-stream/node_modules/readable-stream/CONTRIBUTING.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/concat-stream/node_modules/readable-stream/GOVERNANCE.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/concat-stream/node_modules/readable-stream/LICENSE</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/concat-stream/node_modules/readable-stream/README.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/concat-stream/node_modules/readable-stream/doc/wg-meetings/2015-01-30.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/concat-stream/node_modules/readable-stream/duplex.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/concat-stream/node_modules/readable-stream/lib/_stream_duplex.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/concat-stream/node_modules/readable-stream/lib/_stream_passthrough.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/concat-stream/node_modules/readable-stream/lib/_stream_readable.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/concat-stream/node_modules/readable-stream/lib/_stream_transform.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/concat-stream/node_modules/readable-stream/lib/_stream_writable.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/concat-stream/node_modules/readable-stream/lib/internal/streams/BufferList.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/concat-stream/node_modules/readable-stream/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/concat-stream/node_modules/readable-stream/passthrough.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/concat-stream/node_modules/readable-stream/readable.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/concat-stream/node_modules/readable-stream/transform.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/concat-stream/node_modules/readable-stream/writable.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/readable-stream/doc/stream.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/node_modules/string_decoder/index.js</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -1022,7 +732,11 @@
       <workItem from="1492281376968" duration="291000" />
       <workItem from="1492364132964" duration="22068000" />
       <workItem from="1492581113247" duration="383000" />
-      <workItem from="1492723645123" duration="23686000" />
+      <workItem from="1492723645123" duration="28828000" />
+      <workItem from="1492763682870" duration="1060000" />
+      <workItem from="1492764862835" duration="21000" />
+      <workItem from="1492765001109" duration="235000" />
+      <workItem from="1492807853532" duration="4365000" />
     </task>
     <task id="LOCAL-00001" summary="Fixing HomePageController error.">
       <created>1491432204922</created>
@@ -1122,24 +836,52 @@
       <option name="project" value="LOCAL" />
       <updated>1492756182951</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Minor bugs in Admin view.">
+      <created>1492757355143</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1492757355143</updated>
+    </task>
+    <task id="LOCAL-00016" summary="User Search, Profile Update">
+      <created>1492762017861</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1492762017861</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Improve Search error handling">
+      <created>1492764711330</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1492764711330</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Profile View Update icon.">
+      <created>1492811140133</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1492811140133</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130854000" />
+    <option name="totallyTimeSpent" value="141677000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="0" width="1932" height="1088" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30711207" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32596982" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12567714" sideWeight="0.50431037" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5655471" sideWeight="0.49568966" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15817985" sideWeight="0.49568966" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5655471" sideWeight="0.49568966" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20043337" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1191,24 +933,22 @@
     <MESSAGE value="Ignore workspace.xml" />
     <MESSAGE value="UI changes to Home Page" />
     <MESSAGE value="Admin View, Controller etc." />
-    <option name="LAST_COMMIT_MESSAGE" value="Admin View, Controller etc." />
+    <MESSAGE value="Minor bugs in Admin view." />
+    <MESSAGE value="User Search, Profile Update" />
+    <MESSAGE value="Improve Search error handling" />
+    <MESSAGE value="Profile View Update icon." />
+    <option name="LAST_COMMIT_MESSAGE" value="Profile View Update icon." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/client/services/user.service.client.js</url>
-          <line>38</line>
+          <line>39</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/server/services/user.service.server.js</url>
-          <line>251</line>
-          <properties />
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="22" />
+      <option name="time" value="26" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="http://localhost:3000/">
@@ -1271,31 +1011,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/css/login.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="5" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/user/controller/profile.controller.client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" column="41" lean-forward="true" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/services/bill.service.server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="771">
           <caret line="39" column="40" lean-forward="true" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/user/templates/register.view.client.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4095">
-          <caret line="195" column="73" lean-forward="false" selection-start-line="195" selection-start-column="73" selection-end-line="195" selection-end-column="73" />
         </state>
       </provider>
     </entry>
@@ -1313,19 +1032,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/user/controller/login.controller.client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/views/homepage/controller/homepage.controller.client.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="8" column="33" lean-forward="false" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1333,23 +1043,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="16" column="85" lean-forward="true" selection-start-line="16" selection-start-column="85" selection-end-line="16" selection-end-column="85" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/user/templates/cards.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/user/templates/cards.html" />
     <entry file="file://$PROJECT_DIR$/server/models/bills/bill.schema.server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="11" column="2" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1357,72 +1058,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
           <caret line="33" column="27" lean-forward="false" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/user/controller/search.controller.client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1071">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/user/controller/register.controller.client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="44" column="50" lean-forward="false" selection-start-line="44" selection-start-column="50" selection-end-line="44" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/models/user/user.schema.server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="74" lean-forward="false" selection-start-line="17" selection-start-column="74" selection-end-line="17" selection-end-column="74" />
-          <folding>
-            <marker date="1492740546907" expanded="true" signature="81:727" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/user/templates/search.view.client.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="101" selection-end-column="6" />
-          <folding>
-            <element signature="n#div#0;n#!!top" expanded="false" />
-            <marker date="1492748968797" expanded="true" signature="4583:4839" ph="..." />
-            <marker date="1492748968797" expanded="true" signature="4662:4821" ph="..." />
-            <marker date="1492748968797" expanded="true" signature="4726:4806" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/user/templates/guest.search.view.client.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="79" column="6" lean-forward="false" selection-start-line="79" selection-start-column="6" selection-end-line="79" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/user/templates/guest.search.view.client.html" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/homepage/template/homepage.view.client.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="23" column="22" lean-forward="true" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-          <folding>
-            <marker date="1492755083001" expanded="true" signature="2906:2914" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1430,7 +1073,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="7" column="41" lean-forward="false" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1438,15 +1080,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="2" column="60" lean-forward="false" selection-start-line="2" selection-start-column="60" selection-end-line="2" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/services/geolocation.service.client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1454,7 +1087,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1462,7 +1094,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
           <caret line="13" column="10" lean-forward="false" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1470,7 +1101,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
           <caret line="34" column="28" lean-forward="true" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1478,7 +1108,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="588">
           <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1486,9 +1115,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1496,18 +1122,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="214">
           <caret line="25" column="75" lean-forward="false" selection-start-line="25" selection-start-column="75" selection-end-line="25" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/services/user.service.client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
-          <caret line="42" column="49" lean-forward="false" selection-start-line="42" selection-start-column="49" selection-end-line="42" selection-end-column="49" />
-          <folding>
-            <marker date="1492755085099" expanded="true" signature="141:2536" ph="{...}" />
-            <marker date="1492755085099" expanded="true" signature="162:748" ph="{&quot;createUser&quot;: createUser...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1515,64 +1129,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="5" column="29" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="7" selection-end-column="20" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <marker date="1492755449043" expanded="true" signature="4148:4149" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="611">
-          <caret line="260" column="11" lean-forward="false" selection-start-line="260" selection-start-column="1" selection-end-line="260" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/user/templates/login.view.client.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="903">
-          <caret line="43" column="18" lean-forward="false" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
-          <folding>
-            <element signature="n#style#0;n#text#0;n#div#0;n#a#0;n#div#3;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <marker date="1492213110589" expanded="true" signature="6247:6258" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/models/user/user.model.server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2772">
-          <caret line="132" column="26" lean-forward="false" selection-start-line="132" selection-start-column="26" selection-end-line="132" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="53" column="30" lean-forward="false" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/user/templates/profile.view.client.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="61" column="20" lean-forward="true" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/services/user.service.server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="165" column="16" lean-forward="false" selection-start-line="165" selection-start-column="16" selection-end-line="165" selection-end-column="16" />
-          <folding>
-            <marker date="1492755085103" expanded="true" signature="9274:9287" ph="{...}" />
-            <marker date="1492755085103" expanded="true" signature="10387:10391" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1580,7 +1136,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="7" column="20" lean-forward="true" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1588,7 +1143,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="7" column="38" lean-forward="false" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1596,10 +1150,137 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="43" column="42" lean-forward="true" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#div#0;n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#div#0;n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/user/templates/login.view.client.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="674">
+          <caret line="95" column="20" lean-forward="false" selection-start-line="95" selection-start-column="20" selection-end-line="95" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/models/user/user.schema.server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="74" lean-forward="false" selection-start-line="17" selection-start-column="74" selection-end-line="17" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="777">
+          <caret line="85" column="36" lean-forward="true" selection-start-line="85" selection-start-column="19" selection-end-line="85" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/services/user.service.client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="59" column="41" lean-forward="false" selection-start-line="59" selection-start-column="41" selection-end-line="59" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/user/controller/login.controller.client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-630">
+          <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/user/controller/profile.controller.client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1365">
+          <caret line="65" column="17" lean-forward="false" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/css/login.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" column="32" lean-forward="false" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/user/controller/search.controller.client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="60" column="120" lean-forward="false" selection-start-line="60" selection-start-column="120" selection-end-line="60" selection-end-column="120" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5586">
+          <caret line="266" column="1" lean-forward="false" selection-start-line="266" selection-start-column="1" selection-end-line="266" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/user/templates/search.view.client.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/user/controller/register.controller.client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="58" column="9" lean-forward="true" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/services/geolocation.service.client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/user/templates/register.view.client.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="79" column="45" lean-forward="true" selection-start-line="79" selection-start-column="45" selection-end-line="79" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/user/templates/profile.view.client.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/homepage/template/homepage.view.client.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="52" column="6" lean-forward="true" selection-start-line="52" selection-start-column="6" selection-end-line="52" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/models/user/user.model.server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3045">
+          <caret line="145" column="15" lean-forward="false" selection-start-line="145" selection-start-column="15" selection-end-line="145" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/services/user.service.server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="33" column="74" lean-forward="true" selection-start-line="33" selection-start-column="74" selection-end-line="33" selection-end-column="74" />
+          <folding />
         </state>
       </provider>
     </entry>
