@@ -29,6 +29,6 @@ app.use(express.static(__dirname + '/client'));
 
 require ("./server/app.js")(app);
 
-var port = process.env.PORT || 4000;
+var port = process.env.PORT || 5000;
 
 app.listen(port);
