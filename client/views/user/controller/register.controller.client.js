@@ -42,7 +42,7 @@
                             vm.error = "There already exists a user with the provided User Name."
                         }
                         else {
-                            user.role = "DEFAULT";
+                            user.role = "ADMIN";
                             UserService
                                 .register(user)
                                 .then(function (response) {
