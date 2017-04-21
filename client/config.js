@@ -51,7 +51,7 @@
                 controller: "HomePageController",
                 controllerAs: "model"
             })
-            .when("/admin", {
+            .when("/admin/:uid", {
                 templateUrl: "views/user/templates/admin.view.client.html",
                 controller: "AdminController",
                 controllerAs: "model",

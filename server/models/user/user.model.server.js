@@ -131,7 +131,7 @@ module.exports = function () {
     }
 
     function findAllUsers() {
-        return UserModel.find({})
+        return UserModel.find({role: "DEFAULT"})
             .exec()
             .then(function (users) {
                 return users;

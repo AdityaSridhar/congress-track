@@ -2,17 +2,17 @@
     <div class="container-fluid">
         <div>
             <p class="navbar-text pull-left">
-                <a href="#/user/{{model.userId}}" class="navbar-link naviBar">
+                <a href="#/user/{{model.adminId}}" class="navbar-link naviBar">
                     <span class="glyphicon glyphicon-chevron-left">
                     </span>
                 </a>
             </p>
             <p class="navbar-text pull-right">
-                <a href="#/user/{{model.userId}}/search" class="navbar-link naviBar">
+                <a href="#/user/{{model.adminId}}/search" class="navbar-link naviBar">
                     <span class="glyphicon glyphicon-search">
                     </span>
                 </a>
-                <a href="#/user/{{model.userId}}/fave" class="navbar-link naviBar l-pad">
+                <a href="#/user/{{model.adminId}}/fave" class="navbar-link naviBar l-pad">
                     <span class="glyphicon glyphicon-star-empty">
                     </span>
                 </a>
@@ -46,11 +46,11 @@
                 <td>{{user.facebook != null}}</td>
                 <td>
                     <div>
-                        <a style="display:inline-block" class="btn btn-primary" href="model.editUser(user)">
+                        <a style="display:inline-block" class="btn btn-primary" ng-click="model.editUser(user)">
                     <span class="glyphicon glyphicon-edit">
                     </span>
                         </a>
-                        <a style="display:inline-block" class="btn btn-danger" href="model.deleteUser(user)">
+                        <a style="display:inline-block" class="btn btn-danger" ng-click="model.deleteUser(user)">
                     <span class="glyphicon glyphicon-trash">
                     </span>
                         </a>

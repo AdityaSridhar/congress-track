@@ -3,8 +3,9 @@
         .module("CongressTracker")
         .controller("AdminController", AdminController);
 
-    function AdminController(UserService) {
+    function AdminController($routeParams, UserService) {
         var vm = this;
+        vm.adminId = $routeParams.uid;
         vm.addUser = addUser;
         vm.deleteUser = deleteUser;
         vm.editUser = editUser;
@@ -30,7 +31,7 @@
         }
 
         function deleteUser(user) {
-            UserService.deleteUser(user.id)
+            UserService.deleteUser(user._id)
                 .then(function (res) {
                     vm.message = "User deleted.";
                     updateUserData();
