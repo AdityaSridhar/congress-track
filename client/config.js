@@ -58,12 +58,12 @@
                 resolve: {loggedin: isAdmin }
             })
             .when("/guest/pol/:bio", {
-                templateUrl: "views/user/templates/guest.politician.view.html",
+                templateUrl: "views/guest/template/guest.politician.view.html",
                 controller: "GuestPoliticianController",
                 controllerAs: "model"
             })
             .when("/guest/search/", {
-                templateUrl: "views/user/templates/guest.search.view.client.html",
+                templateUrl: "views/guest/template/guest.search.view.client.html",
                 controller: "GuestSearchController",
                 controllerAs: "model"
             })

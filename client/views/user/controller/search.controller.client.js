@@ -6,13 +6,25 @@
         .module("CongressTracker")
         .controller("SearchController", SearchController);
 
-    function SearchController(GeoLocationService, CongressAPIService, $sce, $routeParams) {
+    function SearchController(GeoLocationService, CongressAPIService, $sce, $routeParams, BillService) {
         var vm = this;
         vm.repSearchText = null;
         vm.billSearchText = null;
         vm.userId = $routeParams["uid"];
         vm.searchRep = searchRep;
         vm.searchBill = searchBill;
+        vm.registerVote = registerVote;
+        vm.bil = {};
+
+        function registerVote(vote, billId){
+            var voter = {'id' : vm.userId,
+                'vote' : vote};
+            BillService
+                .registerVot(voter, billId)
+                .then(function(bill){
+                    vm.bil[billId] = {'upvote' : bill.data.upvote, 'downvote' : bill.data.downvote};
+                },function(){});
+        }
 
         function searchRep() {
             vm.error = "";

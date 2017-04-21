@@ -83,6 +83,18 @@
                     <small>Introduced on {{bill.introduced_on}}</small>
                 </div>
                 <p class="mb-1">{{bill.official_title}}</p>
+                <div>
+                    <button type="button"
+                            id="testBtn"
+                            ng-click="model.registerVote('Upvote', bill.bill_id)"
+                            class="btn btn-success fa fa-thumbs-up"
+                            data-loading-text=" ... "><p ng-show="model.bil[bill.bill_id]">{{model.bil[bill.bill_id].upvote}}</p></button>
+                    <button type="button" id="testBtnDown"
+                            ng-click="model.registerVote('Downvote', bill.bill_id)"
+                            class="btn btn-success fa fa-thumbs-down" data-loading-text=" ... ">
+                        <p ng-show="model.bil[bill.bill_id]">{{model.bil[bill.bill_id].downvote}}</p>
+                    </button>
+                </div>
             </li>
         </ul>
     </div>
