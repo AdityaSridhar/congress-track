@@ -8,12 +8,8 @@
                 </a>
             </p>
             <p class="navbar-text pull-right">
-                <a href="#/user/{{model.adminId}}/search" class="navbar-link naviBar">
-                    <span class="glyphicon glyphicon-search">
-                    </span>
-                </a>
-                <a href="#/user/{{model.adminId}}/fave" class="navbar-link naviBar l-pad">
-                    <span class="glyphicon glyphicon-star-empty">
+                <a href="#/admin/{{model.adminId}}/createUser" class="navbar-link naviBar">
+                    <span class="glyphicon glyphicon-plus">
                     </span>
                 </a>
             </p>
@@ -31,8 +27,6 @@
                 <th>Username</th>
                 <th>Firstname</th>
                 <th>Lastname</th>
-                <th>email</th>
-                <th>FB Authenticated</th>
                 <th>Modify</th>
             </tr>
             </thead>
@@ -42,11 +36,9 @@
                 <td>{{user.username}}</td>
                 <td>{{user.firstName}}</td>
                 <td>{{user.lastName}}</td>
-                <td>{{user.email}}</td>
-                <td>{{user.facebook != null}}</td>
                 <td>
                     <div>
-                        <a style="display:inline-block" class="btn btn-primary" ng-click="model.editUser(user)">
+                        <a style="display:inline-block" class="btn btn-primary" href = "#/admin/{{model.adminId}}/edit/{{user._id}}">
                     <span class="glyphicon glyphicon-edit">
                     </span>
                         </a>

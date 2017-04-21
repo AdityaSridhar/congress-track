@@ -1,0 +1,79 @@
+<nav class="navbar navbar-fixed-top navbar-inverse bg-inverse">
+    <div class="container-fluid">
+        <div>
+            <p class="navbar-text pull-left r-pad">
+                <a href="#/admin/{{model.adminId}}" class="navbar-link naviBar">
+                    <span class="glyphicon glyphicon-chevron-left">
+                    </span>
+                </a>
+            </p>
+            <p class="navbar-text pull-right">
+                <a ng-click="model.updateUser(model.user)" class="navbar-link naviBar">
+                    <span class="glyphicon glyphicon-ok">
+                    </span>
+                </a>
+            </p>
+        </div>
+        <div>
+            <p class="navbar-text">
+                {{model.user.username}}
+            </p>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid website-list pushDown listHandler">
+
+    <div class="alert alert-danger pushDown" ng-show="model.error">
+        {{model.error}}
+    </div>
+
+    <div class="alert alert-success pushDown" ng-show="model.message">
+        {{model.message}}
+    </div>
+
+    <h1>Profile</h1>
+
+    <label for="username">Username</label>
+    <input ng-model="model.user.username" id="username" class="form-control" type="text" placeholder="Neo"/>
+
+    <label for="email">Email</label>
+    <input id="email" ng-model="model.user.email" class="form-control" type="email"
+           placeholder="neo@enterthematix.com"/>
+
+    <label for="first">First Name</label>
+    <input ng-model="model.user.firstName" id="first" class="form-control" type="text" placeholder="Keanu"/>
+
+    <label for="last">Last Name</label>
+    <input ng-model="model.user.lastName" id="last" class="form-control" type="text" placeholder="Reeves"/>
+
+    <label for="address">Address</label>
+    <input ng-model="model.user.address" id="address" class="form-control" type="text" placeholder="Address"/>
+
+    <label for="phone">Phone</label>
+    <input ng-model="model.user.phone" id="phone" class="form-control" type="tel" placeholder="(555) 555-5555"/>
+
+    <br>
+    <a class="btn btn-primary btn-block" ng-click="model.updateUser(model.user)">
+        Update
+    </a>
+
+    <a ng-show="model.admin.role == 'ADMIN'" class="btn btn-primary btn-block" href="#/admin/{{model.adminId}}">
+        Admin Dashboard
+    </a>
+
+    <a ng-show="model.admin.role == 'ADMIN'" class="btn btn-danger btn-block" ng-click = "model.unregisterUser()">
+        Delete
+    </a>
+    <br>
+</div>
+
+<nav class="navbar navbar-inverse bg-inverse navbar-fixed-bottom">
+    <div class="container-fluid">
+        <div class="navbar-text pull-right">
+            <a class="nav-text" href="#/user/{{model.adminId}}">
+                <span class="glyphicon glyphicon-user"></span>
+            </a>
+        </div>
+    </div>
+</nav>

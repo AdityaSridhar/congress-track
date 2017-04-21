@@ -57,6 +57,18 @@
                 controllerAs: "model",
                 resolve: {loggedin: isAdmin }
             })
+            .when("/admin/:uid/edit/:eduid", {
+                templateUrl: "views/user/templates/admin.edit.view.client.html",
+                controller: "AdminEditController",
+                controllerAs: "model",
+                resolve: {loggedin: isAdmin }
+            })
+            .when("/admin/:uid/createUser", {
+                templateUrl: "views/user/templates/admin.create.view.client.html",
+                controller: "AdminCreateController",
+                controllerAs: "model",
+                resolve: {loggedin: isAdmin }
+            })
             .when("/guest/pol/:bio", {
                 templateUrl: "views/guest/template/guest.politician.view.html",
                 controller: "GuestPoliticianController",
