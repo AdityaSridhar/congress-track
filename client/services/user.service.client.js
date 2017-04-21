@@ -19,6 +19,7 @@
             "addToFave" : addToFave,
             "removeFromFaveF" : removeFromFaveF,
             "addToFaveF" : addToFaveF,
+            "findAllUsers": findAllUsers
         };
         return api;
 
@@ -36,6 +37,10 @@
 
         function register(user) {
             return $http.post("/api/register", user);
+        }
+
+        function findAllUsers() {
+            return $http.get("/api/admin/users");
         }
 
         function findUserById(userId) {

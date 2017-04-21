@@ -1,0 +1,63 @@
+<nav class="navbar navbar-fixed-top navbar-inverse bg-inverse">
+    <div class="container-fluid">
+        <div>
+            <p class="navbar-text pull-left">
+                <a href="#/user/{{model.userId}}" class="navbar-link naviBar">
+                    <span class="glyphicon glyphicon-chevron-left">
+                    </span>
+                </a>
+            </p>
+            <p class="navbar-text pull-right">
+                <a href="#/user/{{model.userId}}/search" class="navbar-link naviBar">
+                    <span class="glyphicon glyphicon-search">
+                    </span>
+                </a>
+                <a href="#/user/{{model.userId}}/fave" class="navbar-link naviBar l-pad">
+                    <span class="glyphicon glyphicon-star-empty">
+                    </span>
+                </a>
+            </p>
+        </div>
+    </div>
+</nav>
+
+<div class="container pushDown3">
+    <h2 class="text-center">Users</h2>
+    <div class="table-responsive user-table">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Username</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>email</th>
+                <th>FB Authenticated</th>
+                <th>Modify</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="user in model.users">
+                <td>{{$index}}</td>
+                <td>{{user.username}}</td>
+                <td>{{user.firstName}}</td>
+                <td>{{user.lastName}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.facebook != null}}</td>
+                <td>
+                    <div>
+                        <a style="display:inline-block" class="btn btn-primary" href="model.editUser(user)">
+                    <span class="glyphicon glyphicon-edit">
+                    </span>
+                        </a>
+                        <a style="display:inline-block" class="btn btn-danger" href="model.deleteUser(user)">
+                    <span class="glyphicon glyphicon-trash">
+                    </span>
+                        </a>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -8,10 +8,11 @@ module.exports = function () {
         updateUser: updateUser,
         deleteUser: deleteUser,
         findUserByFacebookId: findUserByFacebookId,
-        addToFav : addToFav,
-        removeFromFav : removeFromFav,
-        addToFavF : addToFavF,
-        removeFromFavF : removeFromFavF
+        addToFav: addToFav,
+        removeFromFav: removeFromFav,
+        addToFavF: addToFavF,
+        removeFromFavF: removeFromFavF,
+        findAllUsers: findAllUsers
     };
 
     var mongoose = require('mongoose');
@@ -20,45 +21,45 @@ module.exports = function () {
 
     return api;
 
-    function addToFav(name, id, bio){
+    function addToFav(name, id, bio) {
         return UserModel.findById(id)
-            .then(function (user){
-                console.log("Model "+user.lof);
-                var nam = {'name' : name, 'bioguide' : bio};
+            .then(function (user) {
+                console.log("Model " + user.lof);
+                var nam = {'name': name, 'bioguide': bio};
                 user.lof.push(nam);
                 return updateUser(user._id, user)
-                    .then(function(user){
-                        console.log("after update "+user);
+                    .then(function (user) {
+                        console.log("after update " + user);
                         return user;
                     });
             });
     }
 
-    function addToFavF(name, id, fid){
+    function addToFavF(name, id, fid) {
         return UserModel.findById(id)
-            .then(function (user){
-                var nam = {'name' : name, 'fuserId' : fid};
+            .then(function (user) {
+                var nam = {'name': name, 'fuserId': fid};
                 user.lofu.push(nam);
                 return updateUser(user._id, user)
-                    .then(function(user){
-                        console.log("after update "+user);
+                    .then(function (user) {
+                        console.log("after update " + user);
                         return user;
                     });
             });
     }
 
-    function removeFromFav(name, id){
+    function removeFromFav(name, id) {
         console.log(name);
         return UserModel.findById(id)
-            .then(function (user){
+            .then(function (user) {
                 console.log("Remove function " + user);
 
                 var lof = user.lof;
                 var tem = {};
-                console.log("lof "+lof);
+                console.log("lof " + lof);
 
-                for(var v in user.lof){
-                    if(user.lof[v].name === name){
+                for (var v in user.lof) {
+                    if (user.lof[v].name === name) {
                         user.lof.splice(v, 1);
                     }
                 }
@@ -67,24 +68,25 @@ module.exports = function () {
 
                 console.log(user);
                 return updateUser(user._id, user)
-                    .then(function(user){
-                        console.log("Mega user" +user);
+                    .then(function (user) {
+                        console.log("Mega user" + user);
                         return user;
                     });
             });
     }
-    function removeFromFavF(name, id){
+
+    function removeFromFavF(name, id) {
         console.log(name);
         return UserModel.findById(id)
-            .then(function (user){
+            .then(function (user) {
                 console.log("Remove function " + user);
 
                 var lofu = user.lofu;
                 var tem = {};
-                console.log("lof "+lofu);
+                console.log("lof " + lofu);
 
-                for(var v in user.lofu){
-                    if(user.lofu[v].name === name){
+                for (var v in user.lofu) {
+                    if (user.lofu[v].name === name) {
                         user.lofu.splice(v, 1);
                     }
                 }
@@ -93,8 +95,8 @@ module.exports = function () {
 
                 console.log(user);
                 return updateUser(user._id, user)
-                    .then(function(user){
-                        console.log("Mega user" +user);
+                    .then(function (user) {
+                        console.log("Mega user" + user);
                         return user;
                     });
             });
@@ -125,6 +127,14 @@ module.exports = function () {
             .exec()
             .then(function (user) {
                 return user;
+            })
+    }
+
+    function findAllUsers() {
+        return UserModel.find({})
+            .exec()
+            .then(function (users) {
+                return users;
             })
     }
 

@@ -1,32 +1,3 @@
-<!--<nav class="navbar navbar-fixed-top navbar-inverse bg-inverse">-->
-    <!--<div class="container-fluid">-->
-        <!--<div class="navbar-text pull-left">-->
-            <!--<a class="nav-text" href="#/user/{{model.userId}}">-->
-                <!--<span class="glyphicon glyphicon-chevron-left"></span>-->
-            <!--</a>-->
-        <!--</div>-->
-        <!--<div class="navbar-text">-->
-            <!--<a class="nav-text" href="#/user/{{model.userId}}">-->
-                <!--<span class="fa fa-user-o"></span>-->
-            <!--</a>-->
-        <!--</div>-->
-        <!--<div class="navbar-text">-->
-            <!--<a class="nav-text" href="#/user/{{model.userId}}/fave">-->
-                <!--<span class="fa fa-star-o"></span>-->
-            <!--</a>-->
-        <!--</div>-->
-        <!--<div class="navbar-header navbar-text">-->
-            <!--<a class="navbar-brand nav-text" href="#/user/{{model.userId}}/district">-->
-                <!--My District-->
-            <!--</a>-->
-        <!--</div>-->
-        <!--<div class="navbar-text">-->
-            <!--<a class="nav-text" href="#/user/{{model.userId}}/search">-->
-                <!--<span class="fa fa-search"></span>-->
-            <!--</a>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</nav>-->
 <nav class="navbar navbar-fixed-top navbar-inverse bg-inverse">
     <div class="container-fluid">
         <div>
@@ -60,7 +31,7 @@
 
 <div class = "pushDown2 listHandler">
 <div class="container">
-    <div class="card w-50 text-center profile-card" style="width: 20rem;">
+    <div class="panel text-center profile-card" style="width: 50rem;">
         <img class="card-img-top mugshot" ng-src="{{model.repPhoto}}" alt="Card image cap">
         <i ng-class="{'fa fa-star': model.liked, 'fa fa-star-o': !model.liked}" ng-click="model.changeClass(model.rep.name, model.rep.bioguide)"></i>
         <div class="card-block">

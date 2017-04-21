@@ -1,4 +1,4 @@
- module.exports = function (app, model) {
+module.exports = function (app, model) {
 
     var bcrypt = require('bcrypt-nodejs');
     var passport = require('passport');
@@ -30,6 +30,7 @@
     app.post("/api/register", register);
     app.get("/api/loggedIn", loggedin);
     app.get('/api/isAdmin', isAdmin);
+    app.get('/api/admin/users', findAllUsers);
     app.post("/api/user/fave", addToFave);
     app.post("/api/user/fave/remove", removeFromFave);
     app.post("/api/user/fave/f", addToFaveF);
@@ -160,15 +161,15 @@
         res.send(req.isAuthenticated() ? req.user : '0');
     }
 
-     function isAdmin(req, res) {
-         var user = req.user;
-         if(user.role === null || user.role === "ADMIN") {
-             res.json(user);
-         }
-         else {
-             res.send('0');
-         }
-     }
+    function isAdmin(req, res) {
+        var user = req.user;
+        if (user.role === null || user.role === "ADMIN") {
+            res.json(user);
+        }
+        else {
+            res.send('0');
+        }
+    }
 
     function findUser(req, res) {
         var username = req.query.username;
@@ -225,6 +226,16 @@
             });
     }
 
+    function findAllUsers(req, res) {
+        model.findAllUsers()
+            .then(function (users) {
+                res.json(users);
+            })
+            .catch(function (error) {
+                res.sendStatus(500).send(error);
+            })
+    }
+
     function updateUser(req, res) {
         var userId = req.params.userId;
         var newUser = req.body;
@@ -248,7 +259,7 @@
             });
     }
 
-    function addToFave(req, res){
+    function addToFave(req, res) {
         var bod = req.body;
         var name = bod.name;
         var id = bod.id;
@@ -256,58 +267,59 @@
         console.log("From server add to fave :" + name);
         console.log(id);
         model.addToFav(name, id, bio)
-            .then(function(user){
-            res.json(user);
-        })
+            .then(function (user) {
+                res.json(user);
+            })
             .catch(function (error) {
-            res.sendStatus(500).send(error);
-        });
+                res.sendStatus(500).send(error);
+            });
     }
 
-    function removeFromFave(req, res){
+    function removeFromFave(req, res) {
         var bod = req.body;
         var name = bod.name;
         var id = bod.id;
         var bio = bod.bioguide;
-        console.log("Server service R" +bod.id);
+        console.log("Server service R" + bod.id);
         model.removeFromFav(name, id, bio)
-            .then(function(user){
-            res.json(user);
-        })
-    .catch(function (error) {
-            res.sendStatus(500).send(error);
-        });
+            .then(function (user) {
+                res.json(user);
+            })
+            .catch(function (error) {
+                res.sendStatus(500).send(error);
+            });
     }
-     // var bod = {'name' : name, 'id' : vm.userId, 'fuserId' : id};
-     function addToFaveF(req, res){
-         var bod = req.body;
-         var name = bod.name;
-         var id = bod.id;
-         var fid = bod.fuserId;
-         console.log("From server add to fave :" + name);
-         console.log(id);
-         model.addToFavF(name, id, fid)
-             .then(function(user){
-                 res.json(user);
-             })
-             .catch(function (error) {
-                 res.sendStatus(500).send(error);
-             });
-     }
 
-     function removeFromFaveF(req, res){
-         var bod = req.body;
-         var name = bod.name;
-         var id = bod.id;
-         var fid = bod.fuserId;
-         console.log("Server service R" +bod.id);
-         model.removeFromFavF(name, id, fid)
-             .then(function(user){
-                 res.json(user);
-             })
-             .catch(function (error) {
-                 res.sendStatus(500).send(error);
-             });
-     }
+    // var bod = {'name' : name, 'id' : vm.userId, 'fuserId' : id};
+    function addToFaveF(req, res) {
+        var bod = req.body;
+        var name = bod.name;
+        var id = bod.id;
+        var fid = bod.fuserId;
+        console.log("From server add to fave :" + name);
+        console.log(id);
+        model.addToFavF(name, id, fid)
+            .then(function (user) {
+                res.json(user);
+            })
+            .catch(function (error) {
+                res.sendStatus(500).send(error);
+            });
+    }
+
+    function removeFromFaveF(req, res) {
+        var bod = req.body;
+        var name = bod.name;
+        var id = bod.id;
+        var fid = bod.fuserId;
+        console.log("Server service R" + bod.id);
+        model.removeFromFavF(name, id, fid)
+            .then(function (user) {
+                res.json(user);
+            })
+            .catch(function (error) {
+                res.sendStatus(500).send(error);
+            });
+    }
 };
 
