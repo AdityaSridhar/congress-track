@@ -59,6 +59,20 @@
                     </a>
                 </div>
             </div>
+
+            <label for="user-search">Search for a user you want to connect with.</label>
+            <div class="row">
+                <div class="col-sm-11 form-group">
+                    <input ng-model="model.userSearchText" type="search" class="form-control"
+                           id="user-search"
+                           placeholder="Username"/>
+                </div>
+                <div class="col-sm-1 form-group">
+                    <a class="btn btn-primary" ng-click="model.searchUser()">
+                        <span class="fa fa-search"></span>
+                    </a>
+                </div>
+            </div>
         </div>
 
         <div class="panel w-50 profile-card" ng-show="model.hasRepSearchResults">
@@ -97,6 +111,16 @@
                 </div>
             </li>
         </ul>
+
+        <div class="panel w-50 profile-card" ng-show="model.hasUserSearchResults">
+            <li class="media list-group-item" ng-repeat="user in model.users">
+                <div class="media-body">
+                    <a href="#/user/{{model.userId}}/fuser/{{user._id}}">
+                        <strong class="text-success">{{user.username}}</strong>
+                    </a>
+                </div>
+            </li>
+        </div>
     </div>
 
 </div>

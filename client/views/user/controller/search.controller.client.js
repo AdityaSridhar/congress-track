@@ -6,15 +6,17 @@
         .module("CongressTracker")
         .controller("SearchController", SearchController);
 
-    function SearchController(GeoLocationService, CongressAPIService, $sce, $routeParams, BillService) {
+    function SearchController(GeoLocationService, CongressAPIService, $sce, $routeParams, BillService, UserService) {
         var vm = this;
-        vm.repSearchText = null;
-        vm.billSearchText = null;
         vm.userId = $routeParams["uid"];
         vm.searchRep = searchRep;
         vm.searchBill = searchBill;
         vm.registerVote = registerVote;
+        vm.searchUser = searchUser;
         vm.bil = {};
+        vm.repSearchText = null;
+        vm.billSearchText = null;
+        vm.userSearchText = null;
 
         function registerVote(vote, billId){
             var voter = {'id' : vm.userId,
@@ -90,6 +92,28 @@
             }
             else{
                 vm.error = "Please enter relevant information in the bill search"
+            }
+        }
+
+        function searchUser() {
+            vm.error = "";
+            vm.hasRepSearchResults = false;
+            vm.hasBillSearchResults = false;
+            vm.hasUserSearchResults = false;
+            if(vm.userSearchText){
+                UserService.findUserMatches(vm.userSearchText)
+                    .then(function (res) {
+                        if(res.data){
+                            vm.hasUserSearchResults = true;
+                            vm.users = res.data;
+                        }
+                        else{
+                            vm.message = "No such user exists.";
+                        }
+                    })
+                    .catch(function (error) {
+                        vm.error = "Oops. Something went wrong: "+ error;
+                    })
             }
         }
     }

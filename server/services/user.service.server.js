@@ -31,6 +31,7 @@ module.exports = function (app, model) {
     app.get("/api/loggedIn", loggedin);
     app.get('/api/isAdmin', isAdmin);
     app.get('/api/admin/users', findAllUsers);
+    app.get('/api/users/:searchText', findUserMatches);
     app.post("/api/user/fave", addToFave);
     app.post("/api/user/fave/remove", removeFromFave);
     app.post("/api/user/fave/f", addToFaveF);
@@ -179,6 +180,17 @@ module.exports = function (app, model) {
         } else if (username) {
             findUserByUsername(req, res);
         }
+    }
+
+    function findUserMatches(req, res) {
+        var searchText = req.params.searchText;
+        model.findUserMatches(searchText)
+            .then(function (users) {
+                res.json(users);
+            })
+            .catch(function (error) {
+                res.sendStatus(500).send(error);
+            })
     }
 
     function createUser(req, res) {

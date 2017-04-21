@@ -19,7 +19,8 @@
             "addToFave" : addToFave,
             "removeFromFaveF" : removeFromFaveF,
             "addToFaveF" : addToFaveF,
-            "findAllUsers": findAllUsers
+            "findAllUsers": findAllUsers,
+            "findUserMatches": findUserMatches
         };
         return api;
 
@@ -53,6 +54,10 @@
 
         function findUserByCredentials(username, password) {
             return $http.get("/api/user?username=" + username + "&password=" + password);
+        }
+
+        function findUserMatches(searchText) {
+            return $http.get("/api/users/" + searchText);
         }
 
         function updateUser(userId, user) {

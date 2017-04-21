@@ -12,7 +12,8 @@ module.exports = function () {
         removeFromFav: removeFromFav,
         addToFavF: addToFavF,
         removeFromFavF: removeFromFavF,
-        findAllUsers: findAllUsers
+        findAllUsers: findAllUsers,
+        findUserMatches: findUserMatches
     };
 
     var mongoose = require('mongoose');
@@ -132,6 +133,14 @@ module.exports = function () {
 
     function findAllUsers() {
         return UserModel.find({role: "DEFAULT"})
+            .exec()
+            .then(function (users) {
+                return users;
+            })
+    }
+
+    function findUserMatches(searchText) {
+        return UserModel.find({role: "DEFAULT", username: { "$regex": searchText, "$options": "i" }})
             .exec()
             .then(function (users) {
                 return users;

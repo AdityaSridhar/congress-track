@@ -8,6 +8,7 @@
         vm.userId = $routeParams["uid"];
         vm.updateUser = updateUser;
         vm.unregisterUser = unregisterUser;
+        vm.navigateToMyDistrict = navigateToDistrictPage;
         vm.logout = logout;
 
         function init() {
@@ -53,6 +54,20 @@
                     $rootScope.currentUser = null;
                     $location.url("/");
                 })
+        }
+
+        function navigateToDistrictPage() {
+            if(vm.user){
+                if(vm.user.address){
+                    $location.url("/user/" + vm.user._id + "/district");
+                }
+                else{
+                    vm.error = "Please provide a valid address to view your district data.";
+                }
+            }
+            else{
+                vm.error = "Invalid Application State";
+            }
         }
     }
 })();
