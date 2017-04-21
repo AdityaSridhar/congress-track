@@ -15,7 +15,7 @@
         vm.dismissAlert = dismissAlert;
 
         function init(){
-
+            vm.adminI = $routeParams["uid"];
             UserService
                 .findUserById(vm.adminId)
                 .then(function (user) {
@@ -43,11 +43,22 @@
                         else {
                             user.role = "DEFAULT";
                             UserService
-                                .register(user)
+                                .createUser(user)
                                 .then(function (response) {
                                     var user = response.data;
                                     vm.message = "User successfully created.";
-                                    vm.adminId = $routeParams["uid"];
+                                    UserService
+                                        .findUserById(vm.adminId)
+                                        .then(function (user) {
+                                            $rootScope.currentUser = user;
+                                            $location.url("/admin/" + vm.adminId);
+                                        })
+                                        .catch(function (error) {
+                                            vm.error = "User not found"
+                                        });
+
+                                    // vm.adminId = $routeParams["uid"];
+
                                 })
                                 .catch(function (error) {
                                     vm.error = "Unable to register user due to an error: " + error;
