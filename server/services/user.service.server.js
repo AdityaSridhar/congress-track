@@ -32,10 +32,10 @@ module.exports = function (app, model) {
 
     app.get("/auth/facebook", passport.authenticate('facebook', {scope: ['public_profile', 'email']}));
     app.get("/auth/facebook/callback", passport.authenticate('facebook', {
-            failureRedirect: '/assignment/#/login'
+            failureRedirect: '#/login'
         }),
         function (req, res) {
-            var redirectUrl = "/assignment/index.html#/user/" + req.user._id.toString();
+            var redirectUrl = "#/user/" + req.user._id.toString();
             res.redirect(redirectUrl);
         });
 
