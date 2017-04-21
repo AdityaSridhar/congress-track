@@ -31,8 +31,8 @@
         }
 
         function findCongressionalDistrict(latitude, longitude) {
-            var url = urlBase + "/districts/locate?latitude=" + latitude + "&longitude=" + longitude;
-            return $http.get(url);
+            var url = urlBase + "/districts/locate?latitude=" + latitude + "&longitude=" + longitude + "&callback=JSON_CALLBACK";
+            return $http.jsonp(url);
         }
 
         function findSponsoredBills(sponsor_id) {
