@@ -14,8 +14,20 @@
         vm.repSearchText = null;
         vm.billSearchText = null;
         vm.userId = $routeParams["uid"];
+        vm.errorVote = {};
         vm.searchRep = searchRep;
         vm.searchBill = searchBill;
+        vm.changeClass= changeClass;
+        vm.registerVote = registerVote;
+
+        function changeClass(){
+            vm.errorClass = "Please sign in or register to make this politician your favourite.";
+
+        }
+
+        function registerVote(id){
+            vm.errorVote[id] = "Please sign in or register to vote on this bill.";
+        }
 
         function searchRep() {
             vm.error = "";
