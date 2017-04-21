@@ -15,8 +15,7 @@ module.exports = function () {
         address: String,
         lof : [{name : String, bioguide : String}],
         lofu : [{name : String, fuserId : String}],
-        // comments: [{type: mongoose.Schema.Types.ObjectId, ref: 'CommentModel'}],
-        // votes: [{type: mongoose.Schema.Types.ObjectId, ref: 'VoteModel'}],
+        role: {type: String, enum: ['DEFAULT', 'ADMIN'], default: "DEFAULT"},
         dateCreated: {type: Date, default: Date.now},
         facebook: {
             id: String,

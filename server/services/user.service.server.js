@@ -29,6 +29,7 @@
     app.post("/api/logout", logout);
     app.post("/api/register", register);
     app.get("/api/loggedIn", loggedin);
+    app.get('/api/isAdmin', isAdmin);
     app.post("/api/user/fave", addToFave);
     app.post("/api/user/fave/remove", removeFromFave);
     app.post("/api/user/fave/f", addToFaveF);
@@ -158,6 +159,16 @@
     function loggedin(req, res) {
         res.send(req.isAuthenticated() ? req.user : '0');
     }
+
+     function isAdmin(req, res) {
+         var user = req.user;
+         if(user.role === null || user.role === "ADMIN") {
+             res.json(user);
+         }
+         else {
+             res.send('0');
+         }
+     }
 
     function findUser(req, res) {
         var username = req.query.username;

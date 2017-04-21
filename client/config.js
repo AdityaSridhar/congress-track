@@ -20,6 +20,22 @@
         return deferred.promise;
     };
 
+    var isAdmin = function ($q, $timeout, $http, $location, $rootScope) {
+        var deferred = $q.defer();
+        $http.get('/api/isAdmin').success(function (user) {
+            $rootScope.errorMessage = null;
+            if (user !== '0') {
+                $rootScope.currentUser = user;
+                deferred.resolve();
+            }
+            else {
+                deferred.reject();
+                $location.url('/');
+            }
+        });
+        return deferred.promise;
+    };
+
     function Config($routeProvider, $httpProvider) {
         $httpProvider.defaults.headers.post['Content-Type'] = 'application/json;charset=UTF-8';
         $httpProvider.defaults.headers.put['Content-Type'] = 'application/json;charset=UTF-8';
@@ -34,6 +50,12 @@
                 templateUrl: "views/homepage/template/homepage.view.client.html",
                 controller: "HomePageController",
                 controllerAs: "model"
+            })
+            .when("/admin", {
+                templateUrl: "views/user/templates/admin.view.client.html",
+                controller: "AdminController",
+                controllerAs: "model",
+                resolve: {loggedin: isAdmin }
             })
             .when("/guest/pol/:bio", {
                 templateUrl: "views/user/templates/guest.politician.view.html",

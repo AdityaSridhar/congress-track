@@ -11,7 +11,7 @@ module.exports = function () {
         addToFav : addToFav,
         removeFromFav : removeFromFav,
         addToFavF : addToFavF,
-        removeFromFavF : removeFromFavF,
+        removeFromFavF : removeFromFavF
     };
 
     var mongoose = require('mongoose');
