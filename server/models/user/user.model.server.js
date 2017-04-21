@@ -143,6 +143,7 @@ module.exports = function () {
         return UserModel.find({role: "DEFAULT", username: { "$regex": searchText, "$options": "i" }})
             .exec()
             .then(function (users) {
+                console.log(users);
                 return users;
             })
     }
