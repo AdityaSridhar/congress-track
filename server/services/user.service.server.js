@@ -9,7 +9,8 @@ module.exports = function (app, model) {
         clientID: process.env.FACEBOOK_CLIENT_ID,
         clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
         callbackURL: process.env.FACEBOOK_CALLBACK_URL,
-        profileFields: ['id', 'name', 'emails']
+        profileFields: ['id', 'name', 'emails'],
+        enableProof: true
     };
 
     passport.use(new LocalStrategy(localStrategy));
